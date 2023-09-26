@@ -1,0 +1,11 @@
+# Nmap 7.93 scan initiated Wed Sep 20 02:33:08 2023 as: nmap -sVC -Pn -oN nmap/port-scan 10.129.198.43
+Nmap scan report for 10.129.198.43
+Host is up (0.20s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.38 ((Debian))
+|_http-title: Login
+|_http-server-header: Apache/2.4.38 (Debian)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 20 02:33:22 2023 -- 1 IP address (1 host up) scanned in 14.14 seconds

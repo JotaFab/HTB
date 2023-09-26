@@ -1,0 +1,10 @@
+# Nmap 7.93 scan initiated Tue Sep 19 16:38:03 2023 as: nmap -sV -oN nmap/port-scan 10.129.101.146
+Nmap scan report for 10.129.101.146
+Host is up (0.23s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 19 16:38:07 2023 -- 1 IP address (1 host up) scanned in 4.50 seconds

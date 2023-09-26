@@ -1,0 +1,39 @@
+# Nmap 7.93 scan initiated Sun Sep 24 18:06:37 2023 as: nmap -T4 -sCV -Pn -oN nmap/port_scan 10.129.4.165
+Nmap scan report for 10.129.4.165
+Host is up (0.19s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds Windows Server 2019 Standard 17763 microsoft-ds
+1433/tcp open  ms-sql-s     Microsoft SQL Server 2017 14.00.1000.00; RTM
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2023-09-24T21:40:58
+|_Not valid after:  2053-09-24T21:40:58
+|_ssl-date: 2023-09-24T22:07:02+00:00; +1s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h45m00s, deviation: 3h30m00s, median: 0s
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)
+|   Computer name: Archetype
+|   NetBIOS computer name: ARCHETYPE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-09-24T15:06:51-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-09-24T22:06:54
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 24 18:07:01 2023 -- 1 IP address (1 host up) scanned in 24.39 seconds
