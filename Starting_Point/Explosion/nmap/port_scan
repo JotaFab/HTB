@@ -1,0 +1,33 @@
+# Nmap 7.93 scan initiated Thu Sep 28 20:12:48 2023 as: nmap -sCV -oN nmap/port_scan 10.129.248.54
+Nmap scan report for 10.129.248.54
+Host is up (0.18s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-09-29T00:13:20+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=Explosion
+| Not valid before: 2023-09-28T00:10:03
+|_Not valid after:  2024-03-29T00:10:03
+| rdp-ntlm-info: 
+|   Target_Name: EXPLOSION
+|   NetBIOS_Domain_Name: EXPLOSION
+|   NetBIOS_Computer_Name: EXPLOSION
+|   DNS_Domain_Name: Explosion
+|   DNS_Computer_Name: Explosion
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-09-29T00:13:12+00:00
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-09-29T00:13:14
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 28 20:13:20 2023 -- 1 IP address (1 host up) scanned in 32.36 seconds

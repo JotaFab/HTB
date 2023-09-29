@@ -1,0 +1,24 @@
+GET /dashboard.php?search=a HTTP/1.1
+
+Host: 10.129.95.174
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate, br
+
+Referer: http://10.129.95.174/dashboard.php
+
+DNT: 1
+
+Connection: close
+
+Cookie: PHPSESSID=udrvc1tvvrh7519rtv9j9o8cmd
+
+Upgrade-Insecure-Requests: 1
+
+
+
