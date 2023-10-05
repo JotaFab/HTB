@@ -1,0 +1,17 @@
+# Nmap 7.93 scan initiated Sat Sep 30 00:31:22 2023 as: nmap -sCV -p22,80 -oN nmap/targeted 10.10.10.238
+Nmap scan report for 10.10.10.238
+Host is up (0.18s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 bacccd81fc9155f3f6a91f4ee8bee52e (RSA)
+|   256 6943376a1809f5e77a67b81811ead765 (ECDSA)
+|_  256 5d5e3f67ef7d762315114b53f8413a94 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html; charset=iso-8859-1).
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep 30 00:31:36 2023 -- 1 IP address (1 host up) scanned in 14.37 seconds
