@@ -1,0 +1,3 @@
+username = "matthew"
+password = "IcingaWebPassword2023"
+pass = "147258369"

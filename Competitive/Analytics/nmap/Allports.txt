@@ -1,0 +1,4 @@
+# Nmap 7.93 scan initiated Mon Oct  9 18:24:40 2023 as: nmap -p- --min-rate 5000 -T4 -oG nmap/Allports.txt 10.129.138.163
+Host: 10.129.138.163 ()	Status: Up
+Host: 10.129.138.163 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65533)
+# Nmap done at Mon Oct  9 18:24:57 2023 -- 1 IP address (1 host up) scanned in 16.88 seconds
