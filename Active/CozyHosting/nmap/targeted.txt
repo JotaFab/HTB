@@ -1,0 +1,16 @@
+# Nmap 7.93 scan initiated Mon Oct 16 19:12:56 2023 as: nmap -sCV -p22,80 -oN nmap/targeted.txt 10.10.11.230
+Nmap scan report for cozyhosting.htb (10.10.11.230)
+Host is up (0.20s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 4356bca7f2ec46ddc10f83304c2caaa8 (ECDSA)
+|_  256 6f7a6c3fa68de27595d47b71ac4f7e42 (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-title: Cozy Hosting - Home
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 16 19:13:10 2023 -- 1 IP address (1 host up) scanned in 13.46 seconds
