@@ -1,0 +1,16 @@
+# Nmap 7.93 scan initiated Mon Oct 30 18:21:41 2023 as: nmap -sCV -p22,80 -oN nmap/targeted.txt 10.10.11.220
+Nmap scan report for 10.10.11.220
+Host is up (0.19s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 47d20066275ee69c808903b58f9e60e5 (ECDSA)
+|_  256 c8d0ac8d299b87405f1bb0a41d538ff1 (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-title: Intentions
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 30 18:21:55 2023 -- 1 IP address (1 host up) scanned in 13.84 seconds
