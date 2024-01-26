@@ -1,0 +1,1533 @@
+# Nmap 7.93 scan initiated Sat Jan 20 11:58:40 2024 as: nmap -sUCV -p123,161 -vvv -oN nmap/UdpScan 10.10.11.248
+Nmap scan report for monitored.htb (10.10.11.248)
+Host is up, received syn-ack ttl 63 (0.31s latency).
+Scanned at 2024-01-20 11:58:41 -05 for 877s
+
+PORT    STATE SERVICE REASON              VERSION
+123/udp open  ntp?    udp-response ttl 63
+| ntp-info: 
+|_  receive time stamp: 2024-01-20T17:00:35
+161/udp open  snmp    udp-response ttl 63 SNMPv1 server; net-snmp SNMPv3 server (public)
+| snmp-interfaces: 
+|   lo
+|     IP address: 127.0.0.1  Netmask: 255.0.0.0
+|     Type: softwareLoopback  Speed: 10 Mbps
+|     Status: up
+|     Traffic stats: 2.12 Mb sent, 2.12 Mb received
+|   VMware VMXNET3 Ethernet Controller
+|     IP address: 10.10.11.248  Netmask: 255.255.254.0
+|     MAC address: 005056b9e316 (VMware)
+|     Type: ethernetCsmacd  Speed: 4 Gbps
+|     Status: up
+|_    Traffic stats: 348.50 Mb sent, 223.21 Mb received
+| snmp-processes: 
+|   1: 
+|     Name: systemd
+|     Path: /sbin/init
+|   2: 
+|     Name: kthreadd
+|   3: 
+|     Name: rcu_gp
+|   4: 
+|     Name: rcu_par_gp
+|   6: 
+|     Name: kworker/0:0H-events_highpri
+|   8: 
+|     Name: mm_percpu_wq
+|   9: 
+|     Name: rcu_tasks_rude_
+|   10: 
+|     Name: rcu_tasks_trace
+|   11: 
+|     Name: ksoftirqd/0
+|   12: 
+|     Name: rcu_sched
+|   13: 
+|     Name: migration/0
+|   15: 
+|     Name: cpuhp/0
+|   16: 
+|     Name: cpuhp/1
+|   17: 
+|     Name: migration/1
+|   18: 
+|     Name: ksoftirqd/1
+|   20: 
+|     Name: kworker/1:0H-events_highpri
+|   23: 
+|     Name: kdevtmpfs
+|   24: 
+|     Name: netns
+|   25: 
+|     Name: kauditd
+|   26: 
+|     Name: khungtaskd
+|   27: 
+|     Name: oom_reaper
+|   28: 
+|     Name: writeback
+|   29: 
+|     Name: kcompactd0
+|   30: 
+|     Name: ksmd
+|   31: 
+|     Name: khugepaged
+|   49: 
+|     Name: kintegrityd
+|   50: 
+|     Name: kblockd
+|   51: 
+|     Name: blkcg_punt_bio
+|   52: 
+|     Name: edac-poller
+|   53: 
+|     Name: devfreq_wq
+|   54: 
+|     Name: kworker/0:1H-kblockd
+|   56: 
+|     Name: kswapd0
+|   57: 
+|     Name: kthrotld
+|   58: 
+|     Name: irq/24-pciehp
+|   59: 
+|     Name: irq/25-pciehp
+|   60: 
+|     Name: irq/26-pciehp
+|   61: 
+|     Name: irq/27-pciehp
+|   62: 
+|     Name: irq/28-pciehp
+|   63: 
+|     Name: irq/29-pciehp
+|   64: 
+|     Name: irq/30-pciehp
+|   65: 
+|     Name: irq/31-pciehp
+|   66: 
+|     Name: irq/32-pciehp
+|   67: 
+|     Name: irq/33-pciehp
+|   68: 
+|     Name: irq/34-pciehp
+|   69: 
+|     Name: irq/35-pciehp
+|   70: 
+|     Name: irq/36-pciehp
+|   71: 
+|     Name: irq/37-pciehp
+|   72: 
+|     Name: irq/38-pciehp
+|   73: 
+|     Name: irq/39-pciehp
+|   74: 
+|     Name: irq/40-pciehp
+|   75: 
+|     Name: irq/41-pciehp
+|   76: 
+|     Name: irq/42-pciehp
+|   77: 
+|     Name: irq/43-pciehp
+|   78: 
+|     Name: irq/44-pciehp
+|   79: 
+|     Name: irq/45-pciehp
+|   80: 
+|     Name: irq/46-pciehp
+|   81: 
+|     Name: irq/47-pciehp
+|   82: 
+|     Name: irq/48-pciehp
+|   83: 
+|     Name: irq/49-pciehp
+|   84: 
+|     Name: irq/50-pciehp
+|   85: 
+|     Name: irq/51-pciehp
+|   86: 
+|     Name: irq/52-pciehp
+|   87: 
+|     Name: irq/53-pciehp
+|   88: 
+|     Name: irq/54-pciehp
+|   89: 
+|     Name: irq/55-pciehp
+|   90: 
+|     Name: acpi_thermal_pm
+|   91: 
+|     Name: ipv6_addrconf
+|   101: 
+|     Name: kstrp
+|   104: 
+|     Name: zswap-shrink
+|   105: 
+|     Name: kworker/u5:0
+|   127: 
+|     Name: kworker/1:1H-kblockd
+|   153: 
+|     Name: mpt_poll_0
+|   154: 
+|     Name: mpt/0
+|   156: 
+|     Name: ata_sff
+|   157: 
+|     Name: scsi_eh_0
+|   158: 
+|     Name: scsi_tmf_0
+|   159: 
+|     Name: scsi_eh_1
+|   160: 
+|     Name: scsi_tmf_1
+|   162: 
+|     Name: scsi_eh_2
+|   163: 
+|     Name: scsi_tmf_2
+|   164: 
+|     Name: scsi_eh_3
+|   165: 
+|     Name: scsi_tmf_3
+|   166: 
+|     Name: scsi_eh_4
+|   167: 
+|     Name: scsi_tmf_4
+|   168: 
+|     Name: scsi_eh_5
+|   169: 
+|     Name: scsi_tmf_5
+|   170: 
+|     Name: scsi_eh_6
+|   171: 
+|     Name: scsi_tmf_6
+|   172: 
+|     Name: scsi_eh_7
+|   173: 
+|     Name: scsi_tmf_7
+|   174: 
+|     Name: scsi_eh_8
+|   175: 
+|     Name: scsi_tmf_8
+|   176: 
+|     Name: scsi_eh_9
+|   177: 
+|     Name: scsi_tmf_9
+|   178: 
+|     Name: scsi_eh_10
+|   179: 
+|     Name: scsi_tmf_10
+|   180: 
+|     Name: scsi_eh_11
+|   181: 
+|     Name: scsi_tmf_11
+|   182: 
+|     Name: scsi_eh_12
+|   183: 
+|     Name: scsi_tmf_12
+|   184: 
+|     Name: scsi_eh_13
+|   185: 
+|     Name: scsi_tmf_13
+|   186: 
+|     Name: scsi_eh_14
+|   187: 
+|     Name: scsi_tmf_14
+|   188: 
+|     Name: scsi_eh_15
+|   189: 
+|     Name: scsi_tmf_15
+|   190: 
+|     Name: scsi_eh_16
+|   191: 
+|     Name: scsi_tmf_16
+|   192: 
+|     Name: scsi_eh_17
+|   193: 
+|     Name: scsi_tmf_17
+|   194: 
+|     Name: scsi_eh_18
+|   195: 
+|     Name: scsi_tmf_18
+|   196: 
+|     Name: scsi_eh_19
+|   197: 
+|     Name: scsi_tmf_19
+|   198: 
+|     Name: scsi_eh_20
+|   199: 
+|     Name: scsi_tmf_20
+|   200: 
+|     Name: scsi_eh_21
+|   201: 
+|     Name: scsi_tmf_21
+|   202: 
+|     Name: scsi_eh_22
+|   203: 
+|     Name: scsi_tmf_22
+|   204: 
+|     Name: scsi_eh_23
+|   205: 
+|     Name: scsi_tmf_23
+|   206: 
+|     Name: scsi_eh_24
+|   207: 
+|     Name: scsi_tmf_24
+|   208: 
+|     Name: scsi_eh_25
+|   209: 
+|     Name: scsi_tmf_25
+|   210: 
+|     Name: scsi_eh_26
+|   211: 
+|     Name: scsi_tmf_26
+|   212: 
+|     Name: scsi_eh_27
+|   213: 
+|     Name: scsi_tmf_27
+|   214: 
+|     Name: scsi_eh_28
+|   215: 
+|     Name: scsi_tmf_28
+|   216: 
+|     Name: scsi_eh_29
+|   217: 
+|     Name: scsi_tmf_29
+|   218: 
+|     Name: scsi_eh_30
+|   219: 
+|     Name: scsi_tmf_30
+|   220: 
+|     Name: scsi_eh_31
+|   221: 
+|     Name: scsi_tmf_31
+|   250: 
+|     Name: scsi_eh_32
+|   251: 
+|     Name: scsi_tmf_32
+|   284: 
+|     Name: jbd2/sda1-8
+|   285: 
+|     Name: ext4-rsv-conver
+|   324: 
+|     Name: systemd-journal
+|     Path: /lib/systemd/systemd-journald
+|   344: 
+|     Name: systemd-udevd
+|     Path: /lib/systemd/systemd-udevd
+|   383: 
+|     Name: cryptd
+|   394: 
+|     Name: irq/16-vmwgfx
+|   397: 
+|     Name: ttm_swap
+|   399: 
+|     Name: card0-crtc0
+|   401: 
+|     Name: card0-crtc1
+|   402: 
+|     Name: card0-crtc2
+|   403: 
+|     Name: card0-crtc3
+|   404: 
+|     Name: card0-crtc4
+|   405: 
+|     Name: card0-crtc5
+|   406: 
+|     Name: card0-crtc6
+|   407: 
+|     Name: card0-crtc7
+|   487: 
+|     Name: VGAuthService
+|     Path: /usr/bin/VGAuthService
+|   488: 
+|     Name: vmtoolsd
+|     Path: /usr/bin/vmtoolsd
+|   504: 
+|     Name: hwmon1
+|   505: 
+|     Name: auditd
+|     Path: /sbin/auditd
+|   508: 
+|     Name: laurel
+|     Path: /usr/local/sbin/laurel
+|     Params: --config /etc/laurel/config.toml
+|   545: 
+|     Name: audit_prune_tre
+|   591: 
+|     Name: cron
+|     Path: /usr/sbin/cron
+|     Params: -f
+|   592: 
+|     Name: dbus-daemon
+|     Path: /usr/bin/dbus-daemon
+|     Params: --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+|   595: 
+|     Name: rsyslogd
+|     Path: /usr/sbin/rsyslogd
+|     Params: -n -iNONE
+|   597: 
+|     Name: systemd-logind
+|     Path: /lib/systemd/systemd-logind
+|   599: 
+|     Name: wpa_supplicant
+|     Path: /sbin/wpa_supplicant
+|     Params: -u -s -O /run/wpa_supplicant
+|   606: 
+|     Name: cron
+|     Path: /usr/sbin/CRON
+|     Params: -f
+|   627: 
+|     Name: sh
+|     Path: /bin/sh
+|     Params: -c sleep 30; sudo -u svc /bin/bash -c /opt/scripts/check_host.sh svc XjH7VCehowpR1xZB 
+|   631: 
+|     Name: dhclient
+|     Path: /sbin/dhclient
+|     Params: -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+|   716: 
+|     Name: avahi-autoipd
+|     Path: avahi-autoipd: [eth0] sleeping
+|   717: 
+|     Name: avahi-autoipd
+|     Path: avahi-autoipd: [eth0] callout dispatcher
+|   761: 
+|     Name: npcd
+|     Path: /usr/local/nagios/bin/npcd
+|     Params: -f /usr/local/nagios/etc/pnp/npcd.cfg
+|   770: 
+|     Name: snmptrapd
+|     Path: /usr/sbin/snmptrapd
+|     Params: -LOw -f -p /run/snmptrapd.pid
+|   787: 
+|     Name: snmpd
+|     Path: /usr/sbin/snmpd
+|     Params: -LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f -p /run/snmpd.pid
+|   792: 
+|     Name: ntpd
+|     Path: /usr/sbin/ntpd
+|     Params: -p /var/run/ntpd.pid -g -u 108:116
+|   799: 
+|     Name: agetty
+|     Path: /sbin/agetty
+|     Params: -o -p -- \u --noclear tty1 linux
+|   810: 
+|     Name: sshd
+|     Path: sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+|   841: 
+|     Name: shellinaboxd
+|     Path: /usr/bin/shellinaboxd
+|     Params: -q --background=/var/run/shellinaboxd.pid -c /var/lib/shellinabox -p 7878 -u shellinabox -g shellinabox --user-css Black on Whit
+|   845: 
+|     Name: slapd
+|     Path: /usr/sbin/slapd
+|     Params: -h ldap:/// ldapi:/// -g openldap -u openldap -F /etc/ldap/slapd.d
+|   846: 
+|     Name: shellinaboxd
+|     Path: /usr/bin/shellinaboxd
+|     Params: -q --background=/var/run/shellinaboxd.pid -c /var/lib/shellinabox -p 7878 -u shellinabox -g shellinabox --user-css Black on Whit
+|   858: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   870: 
+|     Name: postgres
+|     Path: /usr/lib/postgresql/13/bin/postgres
+|     Params: -D /var/lib/postgresql/13/main -c config_file=/etc/postgresql/13/main/postgresql.conf
+|   903: 
+|     Name: postgres
+|     Path: postgres: 13/main: checkpointer 
+|   904: 
+|     Name: postgres
+|     Path: postgres: 13/main: background writer 
+|   905: 
+|     Name: postgres
+|     Path: postgres: 13/main: walwriter 
+|   906: 
+|     Name: postgres
+|     Path: postgres: 13/main: autovacuum launcher 
+|   907: 
+|     Name: postgres
+|     Path: postgres: 13/main: stats collector 
+|   908: 
+|     Name: postgres
+|     Path: postgres: 13/main: logical replication launcher 
+|   940: 
+|     Name: mariadbd
+|     Path: /usr/sbin/mariadbd
+|   942: 
+|     Name: snmptt
+|     Path: /usr/bin/perl
+|     Params: /usr/sbin/snmptt --daemon
+|   943: 
+|     Name: snmptt
+|     Path: /usr/bin/perl
+|     Params: /usr/sbin/snmptt --daemon
+|   975: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: -d /usr/local/nagios/etc/nagios.cfg
+|   976: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: --worker /usr/local/nagios/var/rw/nagios.qh
+|   977: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: --worker /usr/local/nagios/var/rw/nagios.qh
+|   978: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: --worker /usr/local/nagios/var/rw/nagios.qh
+|   979: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: --worker /usr/local/nagios/var/rw/nagios.qh
+|   989: 
+|     Name: xinetd
+|     Path: /usr/sbin/xinetd
+|     Params: -pidfile /run/xinetd.pid -stayalive -inetd_compat -inetd_ipv6
+|   1368: 
+|     Name: nagios
+|     Path: /usr/local/nagios/bin/nagios
+|     Params: -d /usr/local/nagios/etc/nagios.cfg
+|   1409: 
+|     Name: sudo
+|     Path: sudo
+|     Params: -u svc /bin/bash -c /opt/scripts/check_host.sh svc XjH7VCehowpR1xZB
+|   1410: 
+|     Name: bash
+|     Path: /bin/bash
+|     Params: -c /opt/scripts/check_host.sh svc XjH7VCehowpR1xZB
+|   1423: 
+|     Name: exim4
+|     Path: /usr/sbin/exim4
+|     Params: -bd -q30m
+|   3336: 
+|     Name: kworker/1:2-mm_percpu_wq
+|   13821: 
+|     Name: kworker/0:0-events
+|   14332: 
+|     Name: kworker/u4:0-flush-8:0
+|   15428: 
+|     Name: kworker/1:1-events
+|   15662: 
+|   15803: 
+|   15863: 
+|     Name: apache2
+|   16046: 
+|     Name: kworker/0:2-events
+|   16052: 
+|     Name: kworker/u4:4-flush-8:0
+|   16288: 
+|     Name: apache2
+|   16344: 
+|   16355: 
+|     Name: apache2
+|   16842: 
+|   16852: 
+|     Name: apache2
+|   16941: 
+|   16963: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   16998: 
+|   17020: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17043: 
+|   17044: 
+|   17114: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17117: 
+|     Name: apache2
+|   17142: 
+|   17143: 
+|   17144: 
+|   17155: 
+|   17243: 
+|   17278: 
+|   17307: 
+|   17311: 
+|     Name: apache2
+|   17312: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17321: 
+|     Name: apache2
+|   17352: 
+|   17354: 
+|   17357: 
+|     Name: apache2
+|   17367: 
+|   17385: 
+|   17451: 
+|   17459: 
+|   17480: 
+|   17485: 
+|     Name: apache2
+|   17486: 
+|   17487: 
+|     Name: apache2
+|   17497: 
+|     Name: kworker/u4:2-flush-8:0
+|   17515: 
+|   17519: 
+|   17558: 
+|   17560: 
+|   17576: 
+|     Name: apache2
+|   17577: 
+|   17596: 
+|   17599: 
+|   17633: 
+|     Name: apache2
+|   17634: 
+|   17635: 
+|   17636: 
+|   17639: 
+|     Name: apache2
+|   17654: 
+|   17655: 
+|   17659: 
+|   17660: 
+|   17664: 
+|   17665: 
+|   17666: 
+|   17675: 
+|   17684: 
+|     Name: apache2
+|   17687: 
+|   17688: 
+|   17699: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17701: 
+|   17719: 
+|   17723: 
+|   17724: 
+|   17728: 
+|   17729: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17732: 
+|     Name: apache2
+|   17735: 
+|   17737: 
+|   17740: 
+|     Name: apache2
+|   17772: 
+|     Name: apache2
+|   17773: 
+|     Name: apache2
+|   17774: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17783: 
+|   17784: 
+|     Name: apache2
+|   17785: 
+|   17786: 
+|     Name: apache2
+|   17820: 
+|     Name: apache2
+|   17821: 
+|     Name: apache2
+|   17822: 
+|     Name: apache2
+|   17823: 
+|     Name: apache2
+|   17824: 
+|     Name: apache2
+|   17826: 
+|     Name: apache2
+|   17827: 
+|     Name: apache2
+|   17834: 
+|   17859: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17862: 
+|     Name: apache2
+|   17871: 
+|   17872: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|     Params: -k start
+|   17873: 
+|     Name: apache2
+|   17874: 
+|     Name: apache2
+|   17875: 
+|     Name: apache2
+|   17883: 
+|   17884: 
+|   17885: 
+|   17895: 
+|     Name: apache2
+|     Path: /usr/sbin/apache2
+|_    Params: -k start
+| snmp-win32-software: 
+|   adduser_3.118+deb11u1_all; 2023-11-09T10:00:55
+|   alsa-topology-conf_1.2.4-1_all; 2023-11-09T10:03:58
+|   alsa-ucm-conf_1.2.4-2_all; 2023-11-09T10:03:58
+|   anacron_2.3-30_amd64; 2023-11-09T10:03:58
+|   analog_2:6.0-22+b1_amd64; 2023-11-09T10:04:01
+|   ansible_2.10.7+merged+base+2.10.8+dfsg-1_all; 2023-11-09T10:18:59
+|   apache2-bin_2.4.56-1~deb11u2_amd64; 2023-11-09T10:03:45
+|   apache2-data_2.4.56-1~deb11u2_all; 2023-11-09T10:03:46
+|   apache2-doc_2.4.56-1~deb11u2_all; 2023-11-09T10:04:02
+|   apache2-utils_2.4.56-1~deb11u2_amd64; 2023-11-09T10:03:46
+|   apache2_2.4.56-1~deb11u2_amd64; 2023-11-09T10:03:46
+|   apparmor_2.13.6-10_amd64; 2023-11-09T09:57:17
+|   apt-listchanges_3.24_all; 2023-11-09T10:03:51
+|   apt-utils_2.2.4_amd64; 2023-11-09T09:56:58
+|   apt_2.2.4_amd64; 2023-11-09T09:56:44
+|   auditd_1:3.0-2_amd64; 2023-12-07T05:07:44
+|   autoconf_2.69-14_all; 2023-11-09T10:19:00
+|   automake_1:1.16.3-2_all; 2023-11-09T10:19:00
+|   autopoint_0.21-4_all; 2023-11-09T10:19:00
+|   autotools-dev_20180224.1+nmu1_all; 2023-11-09T10:19:00
+|   avahi-autoipd_0.8-5+deb11u2_amd64; 2023-11-09T10:04:02
+|   base-files_11.1+deb11u8_amd64; 2023-11-09T10:00:51
+|   base-passwd_3.5.51_amd64; 2023-11-09T09:56:44
+|   bash-completion_1:2.11-2_all; 2023-11-09T10:03:52
+|   bash_5.1-2+deb11u1_amd64; 2023-11-09T09:56:45
+|   bc_1.07.1-2+b2_amd64; 2023-11-09T10:19:00
+|   bind9-dnsutils_1:9.16.44-1~deb11u1_amd64; 2023-11-09T10:03:53
+|   bind9-host_1:9.16.44-1~deb11u1_amd64; 2023-11-09T10:03:53
+|   bind9-libs_1:9.16.44-1~deb11u1_amd64; 2023-11-09T10:03:53
+|   binutils-common_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   binutils-x86-64-linux-gnu_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   binutils_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   bluetooth_5.55-3.1+deb11u1_all; 2024-01-08T02:43:51
+|   bluez_5.55-3.1+deb11u1_amd64; 2024-01-08T02:43:45
+|   bsdextrautils_2.36.1-8+deb11u1_amd64; 2023-11-09T10:03:37
+|   bsdutils_1:2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:45
+|   build-essential_12.9_amd64; 2023-11-09T10:19:13
+|   busybox_1:1.30.1-6+b3_amd64; 2023-11-09T09:57:14
+|   bzip2_1.0.8-4_amd64; 2023-11-09T10:03:53
+|   ca-certificates_20210119_all; 2023-11-09T10:03:53
+|   composer_2.0.9-2+deb11u1_all; 2023-11-11T03:53:32
+|   console-setup-linux_1.205_all; 2023-11-09T09:58:03
+|   console-setup_1.205_all; 2023-11-09T09:58:04
+|   coreutils_8.32-4+b1_amd64; 2023-11-09T09:56:45
+|   cpio_2.13+dfsg-7.1~deb11u1_amd64; 2023-11-09T10:00:57
+|   cpp-10_10.2.1-6_amd64; 2023-11-09T10:19:04
+|   cpp_4:10.2.1-1_amd64; 2023-11-09T10:19:05
+|   cron_3.0pl1-137_amd64; 2023-11-09T09:56:58
+|   curl_7.74.0-1.3+deb11u11_amd64; 2024-01-08T02:43:53
+|   dash_0.5.11+git20200708+dd9ef66-5_amd64; 2023-11-09T09:56:45
+|   dbus_1.12.28-0+deb11u1_amd64; 2023-11-09T10:03:37
+|   dc_1.07.1-2+b2_amd64; 2023-11-09T10:19:13
+|   debconf-i18n_1.5.77_all; 2023-11-09T09:56:58
+|   debconf_1.5.77_all; 2023-11-09T09:56:42
+|   debhelper_13.3.4_all; 2023-11-09T10:19:14
+|   debian-archive-keyring_2021.1.1+deb11u1_all; 2023-11-09T09:56:43
+|   debian-faq_10.1_all; 2023-11-09T10:03:53
+|   debianutils_4.11.2_amd64; 2023-11-09T09:56:44
+|   dh-autoreconf_20_all; 2023-11-09T10:19:13
+|   dh-strip-nondeterminism_1.12.0-1_all; 2023-11-09T10:19:13
+|   dictionaries-common_1.28.4_all; 2023-11-09T10:04:02
+|   diffutils_1:3.7-5_amd64; 2023-11-09T09:56:45
+|   dirmngr_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:15
+|   discover-data_2.2013.01.11+nmu1_all; 2023-11-09T10:01:47
+|   discover_2.1.2-8_amd64; 2023-11-09T10:01:47
+|   distro-info-data_0.51+deb11u4_all; 2023-11-09T10:03:50
+|   dmidecode_3.3-2_amd64; 2023-11-09T09:56:58
+|   dmsetup_2:1.02.175-2.1_amd64; 2023-11-09T09:56:55
+|   dnsutils_1:9.16.44-1~deb11u1_all; 2023-11-09T10:19:15
+|   doc-debian_6.5_all; 2023-11-09T10:03:53
+|   dpkg-dev_1.20.13_all; 2023-11-09T10:19:13
+|   dpkg_1.20.13_amd64; 2023-11-09T10:00:51
+|   dstat_0.7.4-6.1_all; 2023-11-09T10:19:15
+|   dwz_0.13+20210201-1_amd64; 2023-11-09T10:19:13
+|   e2fsprogs_1.46.2-2_amd64; 2023-11-09T09:56:46
+|   eject_2.36.1-8+deb11u1_amd64; 2023-11-09T09:57:59
+|   emacsen-common_3.0.4_all; 2023-11-09T10:04:02
+|   ethtool_1:5.9-1_amd64; 2023-11-11T10:46:29
+|   exim4-base_4.94.2-7+deb11u2_amd64; 2024-01-08T02:43:55
+|   exim4-config_4.94.2-7+deb11u2_all; 2024-01-08T02:43:54
+|   exim4-daemon-light_4.94.2-7+deb11u2_amd64; 2024-01-08T02:43:55
+|   fakeroot_1.25.3-1.1_amd64; 2023-11-09T10:19:16
+|   fdisk_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:59
+|   file_1:5.39-3+deb11u1_amd64; 2023-11-09T10:03:53
+|   findutils_4.8.0-1_amd64; 2023-11-09T09:56:46
+|   firmware-linux-free_20200122-1_all; 2023-11-09T09:57:17
+|   fontconfig-config_2.13.1-4.2_all; 2023-11-09T10:03:59
+|   fontconfig_2.13.1-4.2_amd64; 2023-11-09T10:19:16
+|   fonts-dejavu-core_2.37-2_all; 2023-11-09T10:03:59
+|   fonts-liberation_1:1.07.4-11_all; 2023-11-09T10:19:16
+|   fping_5.0-1_amd64; 2023-11-09T10:19:16
+|   freetds-common_1.2.3-1_all; 2023-11-09T10:19:16
+|   fuse_2.9.9-5_amd64; 2023-11-11T10:46:29
+|   g++-10_10.2.1-6_amd64; 2023-11-09T10:19:12
+|   g++_4:10.2.1-1_amd64; 2023-11-09T10:19:12
+|   galera-4_26.4.11-0+deb11u1_amd64; 2023-11-09T10:18:27
+|   gawk_1:5.1.0-1_amd64; 2023-11-09T10:18:27
+|   gcc-10-base_10.2.1-6_amd64; 2023-11-09T09:56:40
+|   gcc-10_10.2.1-6_amd64; 2023-11-09T10:19:09
+|   gcc-9-base_9.3.0-22_amd64; 2023-11-09T09:56:46
+|   gcc_4:10.2.1-1_amd64; 2023-11-09T10:19:09
+|   gettext-base_0.21-4_amd64; 2023-11-09T10:03:54
+|   gettext_0.21-4_amd64; 2023-11-09T10:19:14
+|   git-man_1:2.30.2-1+deb11u2_all; 2023-11-09T10:19:17
+|   git_1:2.30.2-1+deb11u2_amd64; 2023-11-09T10:19:18
+|   gnupg-l10n_2.2.27-2+deb11u2_all; 2023-11-09T10:19:18
+|   gnupg-utils_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:18
+|   gnupg_2.2.27-2+deb11u2_all; 2023-11-09T10:19:19
+|   gpg-agent_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:19
+|   gpg-wks-client_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:19
+|   gpg-wks-server_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:19
+|   gpg_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:18
+|   gpgconf_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:14
+|   gpgsm_2.2.27-2+deb11u2_amd64; 2023-11-09T10:19:19
+|   gpgv_2.2.27-2+deb11u2_amd64; 2023-11-09T09:56:43
+|   graphviz_2.42.2-5_amd64; 2023-11-09T10:19:22
+|   grep_3.6-1+deb11u1_amd64; 2023-11-09T09:56:46
+|   groff-base_1.22.4-6_amd64; 2023-11-09T10:03:38
+|   grub-common_2.06-3~deb11u6_amd64; 2023-11-09T10:05:32
+|   grub-pc-bin_2.06-3~deb11u6_amd64; 2023-11-09T10:05:38
+|   grub-pc_2.06-3~deb11u6_amd64; 2023-11-09T10:05:38
+|   grub2-common_2.06-3~deb11u6_amd64; 2023-11-09T10:05:38
+|   gsasl-common_1.10.0-4+deb11u1_all; 2023-11-09T10:19:22
+|   guile-2.2-libs_2.2.7+1-6_amd64; 2023-11-09T10:19:24
+|   gzip_1.10-4+deb11u1_amd64; 2023-11-09T09:56:46
+|   hostname_3.23_amd64; 2023-11-09T09:56:46
+|   iamerican_3.4.02-2_all; 2023-11-09T10:04:02
+|   ibritish_3.4.02-2_all; 2023-11-09T10:04:02
+|   ieee-data_20210605.1_all; 2023-11-09T10:18:39
+|   ienglish-common_3.4.02-2_all; 2023-11-09T10:04:02
+|   ifupdown_0.8.36_amd64; 2023-11-09T09:56:59
+|   init-system-helpers_1.60_all; 2023-11-09T09:56:46
+|   init_1.60_amd64; 2023-11-09T09:57:00
+|   initramfs-tools-core_0.140_all; 2023-11-09T09:57:15
+|   initramfs-tools_0.140_all; 2023-11-09T09:57:15
+|   installation-report_2.78_all; 2023-11-09T10:01:50
+|   intltool-debian_0.35.0+20060710.5_all; 2023-11-09T10:19:14
+|   iproute2_5.10.0-4_amd64; 2023-11-09T09:56:59
+|   iptables_1.8.7-1_amd64; 2023-11-09T10:19:25
+|   iputils-ping_3:20210202-1_amd64; 2023-11-09T09:57:00
+|   isc-dhcp-client_4.4.1-2.3+deb11u2_amd64; 2023-11-09T09:57:00
+|   isc-dhcp-common_4.4.1-2.3+deb11u2_amd64; 2023-11-09T09:57:00
+|   iso-codes_4.6.0-1_all; 2023-11-09T10:04:03
+|   ispell_3.4.02-2_amd64; 2023-11-09T10:04:02
+|   iw_5.9-3_amd64; 2023-11-09T10:04:04
+|   javascript-common_11+nmu1_all; 2023-11-09T10:19:25
+|   jq_1.6-2.1_amd64; 2023-11-11T15:42:42
+|   jsonlint_1.8.3-2_all; 2023-11-11T03:53:31
+|   kbd_2.3.0-3_amd64; 2023-11-09T09:58:03
+|   keyboard-configuration_1.205_all; 2023-11-09T09:58:01
+|   klibc-utils_2.0.8-6.1_amd64; 2023-11-09T09:57:15
+|   kmod_28-1_amd64; 2023-11-09T09:57:00
+|   krb5-locales_1.18.3-6+deb11u4_all; 2023-11-09T10:03:54
+|   laptop-detect_0.16_all; 2023-11-09T10:01:43
+|   ldap-utils_2.4.57+dfsg-3+deb11u1_amd64; 2023-11-09T10:19:25
+|   less_551-2_amd64; 2023-11-09T09:57:00
+|   lftp_4.8.4-2+b1_amd64; 2023-11-09T10:46:33
+|   libacl1_2.2.53-10_amd64; 2023-11-09T09:56:42
+|   libaio1_0.3.112-9_amd64; 2023-11-09T10:18:28
+|   libalgorithm-diff-perl_1.201-1_all; 2023-11-09T10:19:25
+|   libalgorithm-diff-xs-perl_0.04-6+b1_amd64; 2023-11-09T10:19:25
+|   libalgorithm-merge-perl_0.08-3_all; 2023-11-09T10:19:25
+|   libann0_1.1.2+doc-7_amd64; 2023-11-09T10:19:19
+|   libapache2-mod-php7.4_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:32
+|   libapache2-mod-php_2:7.4+76_all; 2023-11-09T10:19:25
+|   libapparmor1_2.13.6-10_amd64; 2023-11-09T09:56:55
+|   libapr1_1.7.0-6+deb11u2_amd64; 2023-11-09T10:03:42
+|   libaprutil1-dbd-sqlite3_1.6.1-5+deb11u1_amd64; 2023-11-09T10:03:42
+|   libaprutil1-ldap_1.6.1-5+deb11u1_amd64; 2023-11-09T10:03:42
+|   libaprutil1_1.6.1-5+deb11u1_amd64; 2023-11-09T10:03:42
+|   libapt-pkg6.0_2.2.4_amd64; 2023-11-09T09:56:43
+|   libarchive-cpio-perl_0.10-1.1_all; 2023-11-09T10:19:25
+|   libarchive-zip-perl_1.68-1_all; 2023-11-09T10:19:13
+|   libargon2-1_0~20171227-0.2_amd64; 2023-11-09T09:56:55
+|   libasan6_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libasound2-data_1.2.4-1.1_all; 2023-11-09T10:03:46
+|   libasound2_1.2.4-1.1_amd64; 2023-11-09T10:03:46
+|   libassuan0_2.5.3-7.1_amd64; 2023-11-09T10:19:14
+|   libatomic1_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libattr1_1:2.4.48-6_amd64; 2023-11-09T09:56:45
+|   libaudit-common_1:3.0-2_all; 2023-11-09T09:56:42
+|   libaudit1_1:3.0-2_amd64; 2023-11-09T09:56:42
+|   libauparse0_1:3.0-2_amd64; 2023-12-07T05:07:44
+|   libauthen-sasl-perl_2.1600-1.1_all; 2023-11-09T10:19:25
+|   libbinutils_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   libblas3_3.9.0-3+deb11u1_amd64; 2023-11-09T10:19:26
+|   libblkid1_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:45
+|   libbpf0_1:0.3-2_amd64; 2023-11-09T09:56:59
+|   libbrotli-dev_1.0.9-2+b2_amd64; 2023-11-09T10:19:26
+|   libbrotli1_1.0.9-2+b2_amd64; 2023-11-09T10:03:42
+|   libbsd0_0.11.3-1+deb11u1_amd64; 2023-11-09T10:00:58
+|   libbz2-1.0_1.0.8-4_amd64; 2023-11-09T09:56:42
+|   libc-bin_2.31-13+deb11u7_amd64; 2023-11-09T10:00:52
+|   libc-client2007e_8:2007f~dfsg-7+b1_amd64; 2023-11-09T10:19:26
+|   libc-dev-bin_2.31-13+deb11u7_amd64; 2023-11-09T10:19:01
+|   libc-devtools_2.31-13+deb11u7_amd64; 2023-11-09T10:19:26
+|   libc-l10n_2.31-13+deb11u7_all; 2023-11-09T10:00:57
+|   libc6-dev_2.31-13+deb11u7_amd64; 2023-11-09T10:19:03
+|   libc6_2.31-13+deb11u7_amd64; 2023-11-09T10:00:52
+|   libcairo2_1.16.0-5_amd64; 2023-11-09T10:19:20
+|   libcap-ng0_0.7.9-2.2+b1_amd64; 2023-11-09T09:56:42
+|   libcap2-bin_1:2.44-1_amd64; 2023-11-09T09:56:59
+|   libcap2_1:2.44-1_amd64; 2023-11-09T09:56:55
+|   libcbor0_0.5.0+dfsg-2_amd64; 2023-11-09T10:03:56
+|   libcc1-0_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libcdt5_2.42.2-5_amd64; 2023-11-09T10:19:19
+|   libcgi-fast-perl_1:2.15-1_all; 2023-11-09T10:19:26
+|   libcgi-pm-perl_4.51-1_all; 2023-11-09T10:19:26
+|   libcgraph6_2.42.2-5_amd64; 2023-11-09T10:19:19
+|   libclone-perl_0.45-1+b1_amd64; 2023-11-09T10:19:26
+|   libcom-err2_1.46.2-2_amd64; 2023-11-09T09:56:41
+|   libconfig-inifiles-perl_3.000003-1_all; 2023-11-09T10:18:27
+|   libcrypt-dev_1:4.4.18-4_amd64; 2023-11-09T10:19:02
+|   libcrypt1_1:4.4.18-4_amd64; 2023-11-09T09:56:40
+|   libcryptsetup12_2:2.3.7-1+deb11u1_amd64; 2023-11-09T09:56:55
+|   libctf-nobfd0_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   libctf0_2.35.2-2_amd64; 2023-11-09T10:19:01
+|   libcurl3-gnutls_7.74.0-1.3+deb11u11_amd64; 2024-01-08T02:43:56
+|   libcurl4-openssl-dev_7.74.0-1.3+deb11u11_amd64; 2024-01-08T02:43:53
+|   libcurl4_7.74.0-1.3+deb11u11_amd64; 2024-01-08T02:43:53
+|   libdaemon0_0.14-7.1_amd64; 2023-11-09T10:04:02
+|   libdata-dump-perl_1.23-1.1_all; 2023-11-09T10:19:27
+|   libdatrie1_0.2.13-1_amd64; 2023-11-09T10:19:20
+|   libdb5.3_5.3.28+dfsg1-0.8_amd64; 2023-11-09T09:56:43
+|   libdbd-mysql-perl_4.050-3+b1_amd64; 2023-11-09T10:19:27
+|   libdbi-perl_1.643-3+b1_amd64; 2023-11-09T10:18:27
+|   libdbi1_0.9.0-6_amd64; 2023-11-09T10:19:27
+|   libdbus-1-3_1.12.28-0+deb11u1_amd64; 2023-11-09T10:03:37
+|   libdebconfclient0_0.260_amd64; 2023-11-09T09:56:44
+|   libdebhelper-perl_13.3.4_all; 2023-11-09T10:19:13
+|   libdeflate-dev_1.7-1_amd64; 2023-11-09T10:19:27
+|   libdeflate0_1.7-1_amd64; 2023-11-09T10:03:59
+|   libdevmapper1.02.1_2:1.02.175-2.1_amd64; 2023-11-09T09:56:55
+|   libdigest-bubblebabble-perl_0.02-2.1_all; 2023-11-09T10:19:27
+|   libdigest-hmac-perl_1.03+dfsg-2.1_all; 2023-11-09T10:19:27
+|   libdiscover2_2.1.2-8_amd64; 2023-11-09T10:01:47
+|   libdns-export1110_1:9.11.19+dfsg-2.1_amd64; 2023-11-09T09:57:00
+|   libdpkg-perl_1.20.13_all; 2023-11-09T10:19:12
+|   libdrm-common_2.4.104-1_all; 2023-11-11T10:46:29
+|   libdrm2_2.4.104-1_amd64; 2023-11-11T10:46:29
+|   libdw1_0.183-1_amd64; 2023-11-09T10:03:46
+|   libedit2_3.1-20191231-2+b1_amd64; 2023-11-09T09:57:00
+|   libefiboot1_37-6_amd64; 2023-11-09T10:05:32
+|   libefivar1_37-6_amd64; 2023-11-09T10:05:32
+|   libelf1_0.183-1_amd64; 2023-11-09T09:56:59
+|   libencode-locale-perl_1.05-1.1_all; 2023-11-09T10:18:37
+|   liberror-perl_0.17029-1_all; 2023-11-09T10:19:17
+|   libestr0_0.1.10-2.1+b1_amd64; 2023-11-09T09:57:00
+|   libevent-2.1-7_2.1.12-stable-1_amd64; 2023-11-09T10:19:15
+|   libevent-core-2.1-7_2.1.12-stable-1_amd64; 2023-11-09T10:19:27
+|   libevent-pthreads-2.1-7_2.1.12-stable-1_amd64; 2023-11-09T10:19:27
+|   libexpat1-dev_2.2.10-2+deb11u5_amd64; 2023-11-09T10:19:28
+|   libexpat1_2.2.10-2+deb11u5_amd64; 2023-11-09T10:01:47
+|   libext2fs2_1.46.2-2_amd64; 2023-11-09T09:56:46
+|   libfakeroot_1.25.3-1.1_amd64; 2023-11-09T10:19:16
+|   libfastjson4_0.99.9-1_amd64; 2023-11-09T09:57:00
+|   libfcgi-bin_2.4.2-2_amd64; 2023-11-09T10:19:28
+|   libfcgi-perl_0.79+ds-2_amd64; 2023-11-09T10:19:26
+|   libfcgi0ldbl_2.4.2-2_amd64; 2023-11-09T10:19:26
+|   libfdisk1_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:58
+|   libffi7_3.3-6_amd64; 2023-11-09T09:56:44
+|   libfido2-1_1.6.0-2_amd64; 2023-11-09T10:03:56
+|   libfile-fcntllock-perl_0.22-3+b7_amd64; 2023-11-09T10:19:28
+|   libfile-listing-perl_6.14-1_all; 2023-11-09T10:18:37
+|   libfile-stripnondeterminism-perl_1.12.0-1_all; 2023-11-09T10:19:13
+|   libfont-afm-perl_1.20-3_all; 2023-11-09T10:19:28
+|   libfontconfig-dev_2.13.1-4.2_amd64; 2023-11-09T10:19:30
+|   libfontconfig1_2.13.1-4.2_amd64; 2023-11-09T10:03:59
+|   libfontenc1_1:1.1.4-1_amd64; 2023-11-09T10:19:30
+|   libfreetype-dev_2.10.4+dfsg-1+deb11u1_amd64; 2023-11-09T10:19:29
+|   libfreetype6-dev_2.10.4+dfsg-1+deb11u1_amd64; 2023-11-09T10:19:29
+|   libfreetype6_2.10.4+dfsg-1+deb11u1_amd64; 2023-11-09T10:03:59
+|   libfribidi0_1.0.8-2+deb11u1_amd64; 2023-11-09T10:19:20
+|   libfstrm0_0.6.0-1+b1_amd64; 2023-11-09T10:03:52
+|   libfuse2_2.9.9-5_amd64; 2023-11-09T10:05:32
+|   libgc1_1:8.0.4-3_amd64; 2023-11-09T10:19:22
+|   libgcc-10-dev_10.2.1-6_amd64; 2023-11-09T10:19:06
+|   libgcc-s1_10.2.1-6_amd64; 2023-11-09T09:56:40
+|   libgcrypt20-dev_1.8.7-6_amd64; 2023-11-09T10:19:31
+|   libgcrypt20_1.8.7-6_amd64; 2023-11-09T09:56:43
+|   libgd-dev_2.3.0-2_amd64; 2023-11-09T10:19:35
+|   libgd3_2.3.0-2_amd64; 2023-11-09T10:04:00
+|   libgdbm-compat4_1.19-2_amd64; 2023-11-09T10:03:40
+|   libgdbm6_1.19-2_amd64; 2023-11-09T10:03:38
+|   libgfortran5_10.2.1-6_amd64; 2023-11-09T10:19:35
+|   libglib2.0-0_2.66.8-1_amd64; 2023-11-09T10:03:47
+|   libglib2.0-data_2.66.8-1_all; 2023-11-09T10:04:04
+|   libgmp10_2:6.2.1+dfsg-1+deb11u1_amd64; 2023-11-09T09:56:43
+|   libgnutls-dane0_3.7.1-5+deb11u3_amd64; 2023-11-09T10:19:15
+|   libgnutls30_3.7.1-5+deb11u3_amd64; 2023-11-09T09:56:44
+|   libgomp1_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libgpg-error-dev_1.38-2_amd64; 2023-11-09T10:19:31
+|   libgpg-error0_1.38-2_amd64; 2023-11-09T09:56:43
+|   libgraphite2-3_1.3.14-1_amd64; 2023-11-09T10:19:20
+|   libgsasl7_1.10.0-4+deb11u1_amd64; 2023-11-09T10:19:35
+|   libgssapi-krb5-2_1.18.3-6+deb11u4_amd64; 2023-11-09T10:00:56
+|   libgts-0.7-5_0.7.6+darcs121130-4+b1_amd64; 2023-11-09T10:19:19
+|   libgts-bin_0.7.6+darcs121130-4+b1_amd64; 2023-11-09T10:19:35
+|   libgvc6_2.42.2-5_amd64; 2023-11-09T10:19:21
+|   libgvpr2_2.42.2-5_amd64; 2023-11-09T10:19:21
+|   libharfbuzz0b_2.7.4-1_amd64; 2023-11-09T10:19:20
+|   libhogweed6_3.7.3-1_amd64; 2023-11-09T09:56:44
+|   libhtml-form-perl_6.07-1_all; 2023-11-09T10:19:35
+|   libhtml-format-perl_2.12-1.1_all; 2023-11-09T10:19:36
+|   libhtml-parser-perl_3.75-1+b1_amd64; 2023-11-09T10:18:38
+|   libhtml-tagset-perl_3.20-4_all; 2023-11-09T10:18:37
+|   libhtml-template-perl_2.97-1.1_all; 2023-11-09T10:19:36
+|   libhtml-tree-perl_5.07-2_all; 2023-11-09T10:18:38
+|   libhttp-cookies-perl_6.10-1_all; 2023-11-09T10:18:38
+|   libhttp-daemon-perl_6.12-1+deb11u1_all; 2023-11-09T10:19:36
+|   libhttp-date-perl_6.05-1_all; 2023-11-09T10:18:37
+|   libhttp-message-perl_6.28-1_all; 2023-11-09T10:18:38
+|   libhttp-negotiate-perl_6.01-1_all; 2023-11-09T10:18:38
+|   libice-dev_2:1.0.10-1_amd64; 2023-11-09T10:19:33
+|   libice6_2:1.0.10-1_amd64; 2023-11-09T10:19:21
+|   libicu67_67.1-7_amd64; 2023-11-09T10:03:45
+|   libidn11_1.33-3_amd64; 2023-11-09T10:19:16
+|   libidn2-0_2.3.0-5_amd64; 2023-11-09T09:56:41
+|   libio-html-perl_1.004-2_all; 2023-11-09T10:18:38
+|   libio-socket-inet6-perl_2.72-2.1_all; 2023-11-09T10:19:36
+|   libio-socket-ssl-perl_2.069-1_all; 2023-11-09T10:18:38
+|   libip4tc2_1.8.7-1_amd64; 2023-11-09T09:56:56
+|   libip6tc2_1.8.7-1_amd64; 2023-11-09T10:19:24
+|   libisc-export1105_1:9.11.19+dfsg-2.1_amd64; 2023-11-09T09:56:59
+|   libisl23_0.23-1_amd64; 2023-11-09T10:19:03
+|   libitm1_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libiw30_30~pre9-13.1_amd64; 2023-11-09T10:04:04
+|   libjansson4_2.13.1-1.1_amd64; 2023-11-09T09:57:00
+|   libjbig-dev_2.1-3.1+b2_amd64; 2023-11-09T10:19:34
+|   libjbig0_2.1-3.1+b2_amd64; 2023-11-09T10:03:59
+|   libjpeg-dev_1:2.0.6-4_amd64; 2023-11-09T10:19:31
+|   libjpeg62-turbo-dev_1:2.0.6-4_amd64; 2023-11-09T10:19:31
+|   libjpeg62-turbo_1:2.0.6-4_amd64; 2023-11-09T10:03:59
+|   libjq1_1.6-2.1_amd64; 2023-11-11T15:42:42
+|   libjs-jquery_3.5.1+dfsg+~3.5.5-7_all; 2023-11-09T10:19:36
+|   libjs-sphinxdoc_3.4.3-2_all; 2023-11-09T10:19:36
+|   libjs-underscore_1.9.1~dfsg-3_all; 2023-11-09T10:19:36
+|   libjson-c5_0.15-2+deb11u1_amd64; 2023-11-09T10:00:58
+|   libk5crypto3_1.18.3-6+deb11u4_amd64; 2023-11-09T10:00:55
+|   libkeyutils1_1.6.1-2_amd64; 2023-11-09T09:56:42
+|   libklibc_2.0.8-6.1_amd64; 2023-11-09T09:57:15
+|   libkmod2_28-1_amd64; 2023-11-09T09:56:56
+|   libkrb5-3_1.18.3-6+deb11u4_amd64; 2023-11-09T10:00:56
+|   libkrb5support0_1.18.3-6+deb11u4_amd64; 2023-11-09T10:00:56
+|   libksba8_1.5.0-3+deb11u2_amd64; 2023-11-09T10:19:14
+|   liblab-gamut1_2.42.2-5_amd64; 2023-11-09T10:19:21
+|   liblapack3_3.9.0-3+deb11u1_amd64; 2023-11-09T10:19:37
+|   libldap-2.4-2_2.4.57+dfsg-3+deb11u1_amd64; 2023-11-09T10:03:42
+|   libldap-common_2.4.57+dfsg-3+deb11u1_all; 2023-11-09T10:04:04
+|   libldap2-dev_2.4.57+dfsg-3+deb11u1_amd64; 2023-11-09T10:19:37
+|   liblinear4_2.3.0+dfsg-5_amd64; 2023-11-09T10:19:37
+|   libllvm11_1:11.0.1-2_amd64; 2023-11-09T10:19:41
+|   liblmdb0_0.9.24-1_amd64; 2023-11-09T10:03:52
+|   liblocale-gettext-perl_1.07-4+b1_amd64; 2023-11-09T09:56:58
+|   liblockfile-bin_1.17-1+b1_amd64; 2023-11-09T10:03:54
+|   liblognorm5_2.0.5-1.1_amd64; 2023-11-09T09:57:00
+|   liblsan0_10.2.1-6_amd64; 2023-11-09T10:19:05
+|   libltdl-dev_2.4.6-15_amd64; 2023-11-09T10:19:41
+|   libltdl7_2.4.6-15_amd64; 2023-11-09T10:18:33
+|   liblua5.3-0_5.3.3-1.1+deb11u1_amd64; 2023-11-09T10:03:43
+|   liblwp-mediatypes-perl_6.04-1_all; 2023-11-09T10:18:38
+|   liblwp-protocol-https-perl_6.10-1_all; 2023-11-09T10:18:38
+|   liblz4-1_1.9.3-2_amd64; 2023-11-09T09:56:43
+|   liblzma-dev_5.2.5-2.1~deb11u1_amd64; 2023-11-09T10:19:34
+|   liblzma5_5.2.5-2.1~deb11u1_amd64; 2023-11-09T09:56:42
+|   libmagic-mgc_1:5.39-3+deb11u1_amd64; 2023-11-09T10:03:53
+|   libmagic1_1:5.39-3+deb11u1_amd64; 2023-11-09T10:03:53
+|   libmail-imapclient-perl_3.42-1_all; 2023-11-09T10:19:41
+|   libmail-sendmail-perl_0.80-1.1_all; 2023-11-09T10:19:41
+|   libmailtools-perl_2.21-1_all; 2023-11-09T10:19:41
+|   libmailutils7_1:3.10-3+b1_amd64; 2023-11-09T10:19:42
+|   libmariadb-dev-compat_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:19:43
+|   libmariadb-dev_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:19:43
+|   libmariadb3_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:18:27
+|   libmaxminddb0_1.5.2-1_amd64; 2023-11-09T10:03:52
+|   libmcrypt-dev_2.5.8-3.4+b1_amd64; 2023-11-09T10:19:43
+|   libmcrypt4_2.5.8-3.4+b1_amd64; 2023-11-09T10:19:43
+|   libmd0_1.0.3-3_amd64; 2023-11-09T09:56:59
+|   libmhash2_0.9.9.9-9_amd64; 2023-11-09T10:19:43
+|   libmnl0_1.0.4-3_amd64; 2023-11-09T09:56:59
+|   libmount1_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:46
+|   libmpc3_1.2.0-1_amd64; 2023-11-09T10:19:03
+|   libmpdec3_2.5.1-1_amd64; 2023-11-09T10:03:49
+|   libmpfr6_4.1.0-3_amd64; 2023-11-09T10:18:26
+|   libmspack0_0.10.1-2_amd64; 2023-11-11T10:46:30
+|   libncurses6_6.2+20201114-2+deb11u2_amd64; 2023-11-09T10:00:56
+|   libncursesw6_6.2+20201114-2+deb11u2_amd64; 2023-11-09T10:00:57
+|   libnet-dns-perl_1.29-1_all; 2023-11-09T10:19:44
+|   libnet-dns-sec-perl_1.18-1+b1_amd64; 2023-11-09T10:19:44
+|   libnet-http-perl_6.20-1_all; 2023-11-09T10:18:38
+|   libnet-ip-perl_1.26-2_all; 2023-11-09T10:19:43
+|   libnet-libidn-perl_0.12.ds-3+b3_amd64; 2023-11-09T10:19:44
+|   libnet-smtp-ssl-perl_1.04-1_all; 2023-11-09T10:19:41
+|   libnet-snmp-perl_6.0.1-6_all; 2023-11-09T10:19:44
+|   libnet-ssleay-perl_1.88-3+b1_amd64; 2023-11-09T10:18:38
+|   libnetfilter-conntrack3_1.0.8-3_amd64; 2023-11-09T10:19:25
+|   libnetsnmptrapd40_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:19:44
+|   libnettle8_3.7.3-1_amd64; 2023-11-09T09:56:43
+|   libnewt0.52_0.52.21-4+b3_amd64; 2023-11-09T09:57:00
+|   libnfnetlink0_1.0.1-3+b1_amd64; 2023-11-09T10:19:24
+|   libnftables1_0.9.8-3.1+deb11u1_amd64; 2023-11-09T09:57:01
+|   libnftnl11_1.1.9-1_amd64; 2023-11-09T09:57:00
+|   libnghttp2-14_1.43.0-1+deb11u1_amd64; 2023-12-07T03:25:07
+|   libnl-3-200_3.4.0-1+b1_amd64; 2023-11-09T10:04:03
+|   libnl-genl-3-200_3.4.0-1+b1_amd64; 2023-11-09T10:04:03
+|   libnl-route-3-200_3.4.0-1+b1_amd64; 2023-11-09T10:04:04
+|   libnpth0_1.6-3_amd64; 2023-11-09T10:19:15
+|   libnsl-dev_1.3.0-2_amd64; 2023-11-09T10:19:03
+|   libnsl2_1.3.0-2_amd64; 2023-11-09T09:56:42
+|   libnss-systemd_247.3-7+deb11u4_amd64; 2023-11-09T10:03:54
+|   libntlm0_1.6-3_amd64; 2023-11-09T10:19:35
+|   libodbc1_2.3.6-0.1+b1_amd64; 2023-11-09T10:18:33
+|   libonig5_6.9.6-1.1_amd64; 2023-11-09T10:19:44
+|   libopts25_1:5.18.16-4_amd64; 2023-11-09T10:19:44
+|   libp11-kit0_0.23.22-1_amd64; 2023-11-09T09:56:44
+|   libpam-modules-bin_1.4.0-9+deb11u1_amd64; 2023-11-09T09:56:48
+|   libpam-modules_1.4.0-9+deb11u1_amd64; 2023-11-09T09:56:43
+|   libpam-runtime_1.4.0-9+deb11u1_all; 2023-11-09T09:56:49
+|   libpam-systemd_247.3-7+deb11u4_amd64; 2023-11-09T10:03:54
+|   libpam0g_1.4.0-9+deb11u1_amd64; 2023-11-09T09:56:48
+|   libpango-1.0-0_1.46.2-3_amd64; 2023-11-09T10:19:21
+|   libpangocairo-1.0-0_1.46.2-3_amd64; 2023-11-09T10:19:21
+|   libpangoft2-1.0-0_1.46.2-3_amd64; 2023-11-09T10:19:21
+|   libparse-recdescent-perl_1.967015+dfsg-2_all; 2023-11-09T10:19:41
+|   libpathplan4_2.42.2-5_amd64; 2023-11-09T10:19:21
+|   libpcap0.8_1.10.0-2_amd64; 2023-11-09T10:19:44
+|   libpci-dev_1:3.7.0-5_amd64; 2023-11-09T10:19:44
+|   libpci3_1:3.7.0-5_amd64; 2023-11-09T09:57:58
+|   libpcre2-16-0_10.36-2+deb11u1_amd64; 2023-11-09T10:19:44
+|   libpcre2-32-0_10.36-2+deb11u1_amd64; 2023-11-09T10:19:45
+|   libpcre2-8-0_10.36-2+deb11u1_amd64; 2023-11-09T09:56:46
+|   libpcre2-dev_10.36-2+deb11u1_amd64; 2023-11-09T10:19:45
+|   libpcre2-posix2_10.36-2+deb11u1_amd64; 2023-11-09T10:19:45
+|   libpcre3_2:8.39-13_amd64; 2023-11-09T09:56:49
+|   libpcsclite1_1.9.1-1_amd64; 2023-11-09T10:04:04
+|   libperl4-corelibs-perl_0.004-2_all; 2023-11-09T10:19:45
+|   libperl5.32_5.32.1-4+deb11u2_amd64; 2023-11-09T10:03:41
+|   libpipeline1_1.5.3-1_amd64; 2023-11-09T10:03:38
+|   libpixman-1-0_0.40.0-1.1~deb11u1_amd64; 2023-11-09T10:19:20
+|   libpng-dev_1.6.37-3_amd64; 2023-11-09T10:19:29
+|   libpng-tools_1.6.37-3_amd64; 2023-11-09T10:19:45
+|   libpng16-16_1.6.37-3_amd64; 2023-11-09T10:03:58
+|   libpopt0_1.18-2_amd64; 2023-11-09T09:57:01
+|   libpq-dev_13.13-0+deb11u1_amd64; 2023-12-07T03:25:08
+|   libpq5_13.13-0+deb11u1_amd64; 2023-12-07T03:25:08
+|   libprocps8_2:3.3.17-5_amd64; 2023-11-09T09:57:01
+|   libprotobuf-c1_1.3.3-1+b2_amd64; 2023-11-09T10:03:52
+|   libpsl5_0.21.0-1.2_amd64; 2023-11-09T10:03:43
+|   libpthread-stubs0-dev_0.4-1_amd64; 2023-11-09T10:19:32
+|   libpython3-dev_3.9.2-3_amd64; 2023-11-09T10:19:47
+|   libpython3-stdlib_3.9.2-3_amd64; 2023-11-09T10:03:50
+|   libpython3.9-dev_3.9.2-1_amd64; 2023-11-09T10:19:47
+|   libpython3.9-minimal_3.9.2-1_amd64; 2023-11-09T10:03:47
+|   libpython3.9-stdlib_3.9.2-1_amd64; 2023-11-09T10:03:50
+|   libpython3.9_3.9.2-1_amd64; 2023-11-09T10:19:42
+|   libquadmath0_10.2.1-6_amd64; 2023-11-09T10:19:06
+|   libreadline8_8.1-1_amd64; 2023-11-09T09:57:01
+|   librrd8_1.7.2-3+b7_amd64; 2023-11-09T10:19:47
+|   librrds-perl_1.7.2-3+b7_amd64; 2023-11-09T10:19:47
+|   librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64; 2023-11-09T10:03:43
+|   libsasl2-2_2.1.27+dfsg-2.1+deb11u1_amd64; 2023-11-09T10:03:42
+|   libsasl2-modules-db_2.1.27+dfsg-2.1+deb11u1_amd64; 2023-11-09T10:03:42
+|   libsasl2-modules_2.1.27+dfsg-2.1+deb11u1_amd64; 2023-11-09T10:04:04
+|   libseccomp2_2.5.1-1+deb11u1_amd64; 2023-11-09T09:56:49
+|   libselinux1_3.1-3_amd64; 2023-11-09T09:56:46
+|   libsemanage-common_3.1-1_all; 2023-11-09T09:56:48
+|   libsemanage1_3.1-1+b2_amd64; 2023-11-09T09:56:48
+|   libsensors-config_1:3.6.0-7_all; 2023-11-09T10:18:34
+|   libsensors-dev_1:3.6.0-7_amd64; 2023-11-09T10:19:47
+|   libsensors5_1:3.6.0-7_amd64; 2023-11-09T10:18:34
+|   libsepol1_3.1-1_amd64; 2023-11-09T09:56:48
+|   libserf-1-1_1.3.9-10_amd64; 2023-11-09T10:19:47
+|   libsigsegv2_2.13-1_amd64; 2023-11-09T10:18:26
+|   libslang2_2.3.2-5_amd64; 2023-11-09T09:57:01
+|   libsm-dev_2:1.2.3-1_amd64; 2023-11-09T10:19:33
+|   libsm6_2:1.2.3-1_amd64; 2023-11-09T10:19:21
+|   libsmartcols1_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:49
+|   libsnappy1v5_1.1.8-1_amd64; 2023-11-09T10:18:28
+|   libsnmp-base_5.9+dfsg-4+deb11u1_all; 2023-11-09T10:18:35
+|   libsnmp-dev_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:19:49
+|   libsnmp-perl_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:19:49
+|   libsnmp-session-perl_1.14~git20201002.0dedded-1_all; 2023-11-09T10:19:49
+|   libsnmp40_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:18:35
+|   libsocket6-perl_0.29-1+b3_amd64; 2023-11-09T10:19:36
+|   libsodium23_1.0.18-1_amd64; 2023-11-09T10:18:31
+|   libsqlite3-0_3.34.1-3_amd64; 2023-11-09T10:03:42
+|   libss2_1.46.2-2_amd64; 2023-11-09T09:56:49
+|   libssh2-1-dev_1.9.0-2_amd64; 2023-11-09T10:19:50
+|   libssh2-1_1.9.0-2_amd64; 2023-11-09T10:03:43
+|   libssl-dev_1.1.1w-0+deb11u1_amd64; 2023-11-09T10:19:42
+|   libssl1.1_1.1.1w-0+deb11u1_amd64; 2023-11-09T10:00:56
+|   libstdc++-10-dev_10.2.1-6_amd64; 2023-11-09T10:19:10
+|   libstdc++6_10.2.1-6_amd64; 2023-11-09T09:56:48
+|   libsub-override-perl_0.09-2_all; 2023-11-09T10:19:13
+|   libsvn1_1.14.1-3+deb11u1_amd64; 2023-11-09T10:19:50
+|   libsybdb5_1.2.3-1_amd64; 2023-11-09T10:19:50
+|   libsys-hostname-long-perl_1.5-2_all; 2023-11-09T10:19:41
+|   libsystemd0_247.3-7+deb11u4_amd64; 2023-11-09T10:00:53
+|   libtasn1-6_4.16.0-2+deb11u1_amd64; 2023-11-09T09:56:49
+|   libterm-readkey-perl_2.38-1+b2_amd64; 2023-11-09T10:19:50
+|   libtext-charwidth-perl_0.04-10+b1_amd64; 2023-11-09T09:57:01
+|   libtext-iconv-perl_1.7-7+b1_amd64; 2023-11-09T09:57:01
+|   libtext-wrapi18n-perl_0.06-9_all; 2023-11-09T09:57:01
+|   libthai-data_0.1.28-3_all; 2023-11-09T10:19:20
+|   libthai0_0.1.28-3_amd64; 2023-11-09T10:19:20
+|   libtiff-dev_4.2.0-1+deb11u5_amd64; 2023-12-07T03:25:08
+|   libtiff5_4.2.0-1+deb11u5_amd64; 2023-12-07T03:25:08
+|   libtiffxx5_4.2.0-1+deb11u5_amd64; 2023-12-07T03:25:08
+|   libtimedate-perl_2.3300-2_all; 2023-11-09T10:18:37
+|   libtinfo6_6.2+20201114-2+deb11u2_amd64; 2023-11-09T10:00:57
+|   libtirpc-common_1.3.1-1+deb11u1_all; 2023-11-09T09:56:48
+|   libtirpc-dev_1.3.1-1+deb11u1_amd64; 2023-11-09T10:19:02
+|   libtirpc3_1.3.1-1+deb11u1_amd64; 2023-11-09T09:56:48
+|   libtool_2.4.6-15_all; 2023-11-09T10:19:13
+|   libtry-tiny-perl_0.30-1_all; 2023-11-09T10:18:38
+|   libtsan0_10.2.1-6_amd64; 2023-11-09T10:19:06
+|   libubsan1_10.2.1-6_amd64; 2023-11-09T10:19:06
+|   libuchardet0_0.0.7-1_amd64; 2023-11-09T10:03:37
+|   libudev-dev_247.3-7+deb11u4_amd64; 2023-11-09T10:19:44
+|   libudev1_247.3-7+deb11u4_amd64; 2023-11-09T10:00:55
+|   libunbound8_1.13.1-1+deb11u1_amd64; 2023-11-09T10:19:15
+|   libunistring2_0.9.10-4_amd64; 2023-11-09T09:56:46
+|   liburi-perl_5.08-1_all; 2023-11-09T10:18:38
+|   libusb-0.1-4_2:0.1.12-32_amd64; 2023-11-09T10:01:47
+|   libusb-1.0-0_2:1.0.24-3_amd64; 2023-11-09T09:57:59
+|   libutf8proc2_2.5.0-1_amd64; 2023-11-09T10:19:50
+|   libuuid1_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:49
+|   libuv1_1.40.0-2_amd64; 2023-11-09T10:03:52
+|   libvpx-dev_1.9.0-1+deb11u2_amd64; 2023-11-09T10:19:34
+|   libvpx6_1.9.0-1+deb11u2_amd64; 2023-11-09T10:19:33
+|   libwebp6_0.6.1-2.1+deb11u2_amd64; 2023-11-09T10:04:00
+|   libwrap0-dev_7.6.q-31_amd64; 2023-11-09T10:19:48
+|   libwrap0_7.6.q-31_amd64; 2023-11-09T10:04:04
+|   libwww-perl_6.52-1_all; 2023-11-09T10:18:39
+|   libwww-robotrules-perl_6.02-1_all; 2023-11-09T10:18:38
+|   libx11-6_2:1.7.2-1+deb11u2_amd64; 2023-11-09T10:04:00
+|   libx11-data_2:1.7.2-1+deb11u2_all; 2023-11-09T10:04:00
+|   libx11-dev_2:1.7.2-1+deb11u2_amd64; 2023-11-09T10:19:33
+|   libxau-dev_1:1.0.9-1_amd64; 2023-11-09T10:19:32
+|   libxau6_1:1.0.9-1_amd64; 2023-11-09T10:04:00
+|   libxaw7_2:1.0.13-1.1_amd64; 2023-11-09T10:19:22
+|   libxcb-render0_1.14-3_amd64; 2023-11-09T10:19:20
+|   libxcb-shm0_1.14-3_amd64; 2023-11-09T10:19:20
+|   libxcb1-dev_1.14-3_amd64; 2023-11-09T10:19:32
+|   libxcb1_1.14-3_amd64; 2023-11-09T10:04:00
+|   libxdmcp-dev_1:1.1.2-3_amd64; 2023-11-09T10:19:32
+|   libxdmcp6_1:1.1.2-3_amd64; 2023-11-09T10:04:00
+|   libxext6_2:1.3.3-1.1_amd64; 2023-11-09T10:04:04
+|   libxml-parser-perl_2.46-2_amd64; 2023-11-09T10:19:50
+|   libxml2_2.9.10+dfsg-6.7+deb11u4_amd64; 2023-11-09T10:03:45
+|   libxmlsec1-openssl_1.2.31-1_amd64; 2023-11-11T10:46:30
+|   libxmlsec1_1.2.31-1_amd64; 2023-11-11T10:46:30
+|   libxmu6_2:1.1.2-2+b3_amd64; 2023-11-09T10:19:22
+|   libxmuu1_2:1.1.2-2+b3_amd64; 2023-11-09T10:04:05
+|   libxpm-dev_1:3.5.12-1.1+deb11u1_amd64; 2023-11-09T10:19:33
+|   libxpm4_1:3.5.12-1.1+deb11u1_amd64; 2023-11-09T10:04:00
+|   libxrender1_1:0.9.10-1_amd64; 2023-11-09T10:19:20
+|   libxslt1.1_1.1.34-4+deb11u1_amd64; 2023-11-09T10:19:50
+|   libxt-dev_1:1.2.0-1_amd64; 2023-11-09T10:19:33
+|   libxt6_1:1.2.0-1_amd64; 2023-11-09T10:19:22
+|   libxtables12_1.8.7-1_amd64; 2023-11-09T09:57:01
+|   libxxhash0_0.8.0-2_amd64; 2023-11-09T09:56:49
+|   libyaml-0-2_0.2.2-1_amd64; 2023-11-09T10:18:35
+|   libz3-4_4.8.10-1_amd64; 2023-11-09T10:19:38
+|   libzstd1_1.4.8+dfsg-2.1_amd64; 2023-11-09T09:56:48
+|   linux-base_4.6_all; 2023-11-09T09:57:15
+|   linux-image-5.10.0-27-amd64_5.10.205-2_amd64; 2024-01-08T02:45:02
+|   linux-image-amd64_5.10.205-2_amd64; 2024-01-08T02:45:08
+|   linux-libc-dev_5.10.205-2_amd64; 2024-01-08T02:44:00
+|   locales_2.31-13+deb11u7_all; 2023-11-09T10:00:58
+|   login_1:4.8.1-1_amd64; 2023-11-09T09:56:50
+|   logrotate_3.18.0-2+deb11u2_amd64; 2023-11-09T10:00:57
+|   logsave_1.46.2-2_amd64; 2023-11-09T09:56:49
+|   lsb-base_11.1.0_all; 2023-11-09T09:56:50
+|   lsb-release_11.1.0_all; 2023-11-09T10:04:05
+|   lsof_4.93.2+dfsg-1.1_amd64; 2023-11-09T10:03:54
+|   lua-lpeg_1.0.2-1_amd64; 2023-11-09T10:19:51
+|   m4_1.4.18-5_amd64; 2023-11-09T10:19:00
+|   mailcap_3.69_all; 2023-11-09T10:03:46
+|   mailutils-common_1:3.10-3_all; 2023-11-09T10:19:41
+|   mailutils_1:3.10-3+b1_amd64; 2023-11-09T10:19:51
+|   make_4.3-4.1_amd64; 2023-11-09T10:19:12
+|   man-db_2.9.4-2_amd64; 2023-11-09T10:03:38
+|   manpages-dev_5.10-1_all; 2023-11-09T10:19:51
+|   manpages_5.10-1_all; 2023-11-09T10:03:54
+|   mariadb-client-10.5_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:18:28
+|   mariadb-client-core-10.5_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:18:27
+|   mariadb-common_1:10.5.21-0+deb11u1_all; 2023-11-09T10:18:27
+|   mariadb-server-10.5_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:18:31
+|   mariadb-server-core-10.5_1:10.5.21-0+deb11u1_amd64; 2023-11-09T10:18:29
+|   mariadb-server_1:10.5.21-0+deb11u1_all; 2023-11-09T10:19:51
+|   mawk_1.3.4.20200120-2_amd64; 2023-11-09T09:56:46
+|   mcrypt_2.6.8-4_amd64; 2023-11-09T10:19:52
+|   media-types_4.0.0_all; 2023-11-09T10:03:46
+|   mime-support_3.66_all; 2023-11-09T10:03:46
+|   mlock_8:2007f~dfsg-7+b1_amd64; 2023-11-09T10:19:26
+|   mount_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:50
+|   mrtg_2.17.7-2+deb11u1_amd64; 2023-11-09T10:19:52
+|   mysql-common_5.8+1.0.7_all; 2023-11-09T10:18:27
+|   nano_5.4-2+deb11u2_amd64; 2023-11-09T09:57:02
+|   ncurses-base_6.2+20201114-2+deb11u2_all; 2023-11-09T10:00:53
+|   ncurses-bin_6.2+20201114-2+deb11u2_amd64; 2023-11-09T10:00:51
+|   ncurses-term_6.2+20201114-2+deb11u2_all; 2023-11-09T10:03:55
+|   net-tools_1.60+git20181103.0eebece-1_amd64; 2023-11-11T10:46:17
+|   netbase_6.3_all; 2023-11-09T09:57:01
+|   netcat-traditional_1.10-46_amd64; 2023-11-09T10:03:56
+|   nftables_0.9.8-3.1+deb11u1_amd64; 2023-11-09T09:57:02
+|   nmap-common_7.91+dfsg1+really7.80+dfsg1-2_all; 2023-11-09T10:19:53
+|   nmap_7.91+dfsg1+really7.80+dfsg1-2_amd64; 2023-11-09T10:19:53
+|   ntp_1:4.2.8p15+dfsg-1_amd64; 2023-11-09T10:19:53
+|   open-vm-tools_2:11.2.5-2+deb11u3_amd64; 2023-11-11T10:46:30
+|   openssh-client_1:8.4p1-5+deb11u3_amd64; 2024-01-08T02:43:46
+|   openssh-server_1:8.4p1-5+deb11u3_amd64; 2024-01-08T02:43:46
+|   openssh-sftp-server_1:8.4p1-5+deb11u3_amd64; 2024-01-08T02:43:45
+|   openssl_1.1.1w-0+deb11u1_amd64; 2023-11-09T10:03:53
+|   os-prober_1.79_amd64; 2023-11-09T10:05:32
+|   passwd_1:4.8.1-1_amd64; 2023-11-09T09:56:48
+|   patch_2.7.6-7_amd64; 2023-11-09T10:19:12
+|   pci.ids_0.0~2021.02.08-1_all; 2023-11-09T09:57:58
+|   pciutils_1:3.7.0-5_amd64; 2023-11-09T09:57:58
+|   perl-base_5.32.1-4+deb11u2_amd64; 2023-11-09T09:56:47
+|   perl-modules-5.32_5.32.1-4+deb11u2_all; 2023-11-09T10:03:40
+|   perl-openssl-defaults_5_amd64; 2023-11-09T10:18:38
+|   perl_5.32.1-4+deb11u2_amd64; 2023-11-09T10:03:41
+|   php-common_2:76_all; 2023-11-09T10:18:31
+|   php-composer-ca-bundle_1.2.9-1_all; 2023-11-11T03:53:30
+|   php-composer-semver_3.2.4-2_all; 2023-11-11T03:53:30
+|   php-composer-spdx-licenses_1.5.5-2_all; 2023-11-11T03:53:30
+|   php-composer-xdebug-handler_1.4.5-1_all; 2023-11-11T03:53:30
+|   php-curl_2:7.4+76_all; 2023-11-09T10:19:54
+|   php-dev_2:7.4+76_all; 2023-11-09T10:19:54
+|   php-gd_2:7.4+76_all; 2023-11-09T10:19:54
+|   php-imap_2:7.4+76_all; 2023-11-09T10:19:55
+|   php-intl_2:7.4+76_all; 2023-11-09T10:19:55
+|   php-json-schema_5.2.10-2_all; 2023-11-11T03:53:30
+|   php-ldap_2:7.4+76_all; 2023-11-09T10:19:55
+|   php-mbstring_2:7.4+76_all; 2023-11-09T10:19:55
+|   php-mysql_2:7.4+76_all; 2023-11-09T10:19:56
+|   php-pear_1:1.10.12+submodules+notgz+20210212-1_all; 2023-11-09T10:19:56
+|   php-pgsql_2:7.4+76_all; 2023-11-09T10:19:56
+|   php-psr-container_1.0.0-2_all; 2023-11-11T03:53:31
+|   php-psr-log_1.1.3-2_all; 2023-11-11T03:53:30
+|   php-react-promise_2.7.0-2_all; 2023-11-11T03:53:31
+|   php-snmp_2:7.4+76_all; 2023-11-09T10:19:57
+|   php-sqlite3_2:7.4+76_all; 2023-11-09T10:19:57
+|   php-ssh2_1.2+0.13-4_amd64; 2023-11-09T10:18:33
+|   php-sybase_2:7.4+76_all; 2023-11-09T10:19:57
+|   php-symfony-console_4.4.19+dfsg-2+deb11u3_all; 2023-11-11T03:53:31
+|   php-symfony-filesystem_4.4.19+dfsg-2+deb11u3_all; 2023-11-11T03:53:31
+|   php-symfony-finder_4.4.19+dfsg-2+deb11u3_all; 2023-11-11T03:53:31
+|   php-symfony-polyfill-php80_1.22.1-1_all; 2023-11-11T03:53:31
+|   php-symfony-process_4.4.19+dfsg-2+deb11u3_all; 2023-11-11T03:53:31
+|   php-symfony-service-contracts_1.1.10-2_all; 2023-11-11T03:53:31
+|   php-xml_2:7.4+76_all; 2023-11-09T10:19:56
+|   php7.4-cli_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:31
+|   php7.4-common_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:31
+|   php7.4-curl_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:54
+|   php7.4-dev_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:54
+|   php7.4-gd_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:54
+|   php7.4-imap_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:55
+|   php7.4-intl_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:55
+|   php7.4-json_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:31
+|   php7.4-ldap_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:55
+|   php7.4-mbstring_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:55
+|   php7.4-mysql_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:56
+|   php7.4-opcache_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:31
+|   php7.4-pgsql_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:56
+|   php7.4-readline_7.4.33-1+deb11u4_amd64; 2023-11-09T10:18:31
+|   php7.4-snmp_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:57
+|   php7.4-sqlite3_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:57
+|   php7.4-sybase_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:57
+|   php7.4-xml_7.4.33-1+deb11u4_amd64; 2023-11-09T10:19:56
+|   php7.4_7.4.33-1+deb11u4_all; 2023-11-09T10:19:53
+|   php_2:7.4+76_all; 2023-11-09T10:19:54
+|   pinentry-curses_1.1.0-4_amd64; 2023-11-09T10:19:19
+|   pkg-config_0.29.2-1_amd64; 2023-11-09T10:19:30
+|   pkg-php-tools_1.40_all; 2023-11-09T10:19:57
+|   po-debconf_1.0.21+nmu1_all; 2023-11-09T10:19:14
+|   postgresql-13_13.13-0+deb11u1_amd64; 2023-12-07T03:25:10
+|   postgresql-client-13_13.13-0+deb11u1_amd64; 2023-12-07T03:25:08
+|   postgresql-client-common_225_all; 2023-11-09T10:19:57
+|   postgresql-common_225_all; 2023-11-09T10:19:58
+|   postgresql-contrib_13+225_all; 2023-11-09T10:20:01
+|   postgresql_13+225_all; 2023-11-09T10:20:01
+|   powertop_2.11-1_amd64; 2023-11-09T10:04:05
+|   procps_2:3.3.17-5_amd64; 2023-11-09T09:57:02
+|   psmisc_23.4-2_amd64; 2023-11-09T10:18:29
+|   publicsuffix_20220811.1734-0+deb11u1_all; 2023-11-09T10:04:05
+|   python-apt-common_2.2.1_all; 2023-11-09T10:03:50
+|   python-pip-whl_20.3.4-4+deb11u1_all; 2023-11-09T10:20:02
+|   python3-apt_2.2.1_amd64; 2023-11-09T10:03:51
+|   python3-argcomplete_1.8.1-1.5_all; 2023-11-09T10:20:02
+|   python3-bs4_4.9.3-1_all; 2023-11-09T10:20:02
+|   python3-certifi_2020.6.20-1_all; 2023-11-09T10:03:57
+|   python3-cffi-backend_1.14.5-1_amd64; 2023-11-09T10:18:35
+|   python3-chardet_4.0.0-1_all; 2023-11-09T10:03:56
+|   python3-cryptography_3.3.2-1_amd64; 2023-11-09T10:18:35
+|   python3-debconf_1.5.77_all; 2023-11-09T10:03:51
+|   python3-debian_0.1.39_all; 2023-11-09T10:03:56
+|   python3-debianbts_3.1.0_all; 2023-11-09T10:03:57
+|   python3-dev_3.9.2-3_amd64; 2023-11-09T10:20:02
+|   python3-distutils_3.9.2-1_all; 2023-11-09T10:18:37
+|   python3-dnspython_2.0.0-1_all; 2023-11-09T10:18:37
+|   python3-html5lib_1.1-3_all; 2023-11-09T10:20:02
+|   python3-httplib2_0.18.1-3_all; 2023-11-09T10:03:56
+|   python3-idna_2.10-1_all; 2023-11-09T10:03:57
+|   python3-jinja2_2.11.3-1_all; 2023-11-09T10:18:35
+|   python3-jmespath_0.10.0-1_all; 2023-11-09T10:20:03
+|   python3-kerberos_1.1.14-3.1+b3_amd64; 2023-11-09T10:20:03
+|   python3-lib2to3_3.9.2-1_all; 2023-11-09T10:18:37
+|   python3-libcloud_3.2.0-2_all; 2023-11-09T10:20:06
+|   python3-lockfile_1:0.12.2-2.2_all; 2023-11-09T10:20:03
+|   python3-lxml_4.6.3+dfsg-0.1+deb11u1_amd64; 2023-11-09T10:20:06
+|   python3-markupsafe_1.1.1-1+b3_amd64; 2023-11-09T10:18:35
+|   python3-minimal_3.9.2-3_amd64; 2023-11-09T10:03:49
+|   python3-netaddr_0.7.19-5_all; 2023-11-09T10:18:39
+|   python3-ntlm-auth_1.4.0-1_all; 2023-11-09T10:20:06
+|   python3-numpy_1:1.19.5-1_amd64; 2023-11-09T10:20:07
+|   python3-packaging_20.9-2_all; 2023-11-09T10:18:35
+|   python3-pip_20.3.4-4+deb11u1_all; 2023-11-09T10:20:08
+|   python3-pkg-resources_52.0.0-4_all; 2023-11-09T10:03:56
+|   python3-pycryptodome_3.9.7+dfsg1-1+b2_amd64; 2023-11-09T10:18:37
+|   python3-pycurl_7.43.0.6-5_amd64; 2023-11-09T10:03:57
+|   python3-pymssql_2.1.4+dfsg-3+b3_amd64; 2023-11-09T10:20:08
+|   python3-pyparsing_2.4.7-1_all; 2023-11-09T10:18:35
+|   python3-pysimplesoap_1.16.2-3_all; 2023-11-09T10:03:57
+|   python3-reportbug_7.10.3+deb11u1_all; 2023-11-09T10:03:57
+|   python3-requests-kerberos_0.12.0-2_all; 2023-11-09T10:20:08
+|   python3-requests-ntlm_1.1.0-1.1_all; 2023-11-09T10:20:08
+|   python3-requests-toolbelt_0.9.1-1_all; 2023-11-09T10:20:08
+|   python3-requests_2.25.1+dfsg-2_all; 2023-11-09T10:03:57
+|   python3-rrdtool_1.7.2-3+b7_amd64; 2023-11-09T10:20:08
+|   python3-selinux_3.1-3_amd64; 2023-11-09T10:20:08
+|   python3-setuptools_52.0.0-4_all; 2023-11-09T10:20:07
+|   python3-simplejson_3.17.2-1_amd64; 2023-11-09T10:20:03
+|   python3-six_1.16.0-2_all; 2023-11-09T10:03:56
+|   python3-soupsieve_2.2.1-1_all; 2023-11-09T10:20:02
+|   python3-urllib3_1.26.5-1~exp1_all; 2023-11-09T10:03:57
+|   python3-webencodings_0.5.1-2_all; 2023-11-09T10:20:02
+|   python3-wheel_0.34.2-1_all; 2023-11-09T10:20:07
+|   python3-winrm_0.3.0-2_all; 2023-11-09T10:20:08
+|   python3-xmltodict_0.12.0-2_all; 2023-11-09T10:20:08
+|   python3-yaml_5.3.1-5_amd64; 2023-11-09T10:18:35
+|   python3.9-dev_3.9.2-1_amd64; 2023-11-09T10:20:02
+|   python3.9-minimal_3.9.2-1_amd64; 2023-11-09T10:03:48
+|   python3.9_3.9.2-1_amd64; 2023-11-09T10:03:50
+|   python3_3.9.2-3_amd64; 2023-11-09T10:03:50
+|   readline-common_8.1-1_all; 2023-11-09T09:57:01
+|   reportbug_7.10.3+deb11u1_all; 2023-11-09T10:03:57
+|   rrdtool_1.7.2-3+b7_amd64; 2023-11-09T10:20:08
+|   rsync_3.2.3-4+deb11u1_amd64; 2023-11-09T10:18:29
+|   rsyslog_8.2102.0-2+deb11u1_amd64; 2023-11-09T09:57:02
+|   runit-helper_2.10.3_all; 2023-11-09T10:04:05
+|   scons_4.0.1+dfsg-2_all; 2023-11-09T10:47:44
+|   sed_4.7-1_amd64; 2023-11-09T09:56:50
+|   sensible-utils_0.0.14_all; 2023-11-09T09:57:01
+|   shared-mime-info_2.0-1_amd64; 2023-11-09T10:04:05
+|   shellinabox_2.21+b1_amd64; 2023-11-09T10:23:10
+|   shtool_2.0.8-10_all; 2023-11-09T10:19:54
+|   slapd_2.4.57+dfsg-3+deb11u1_amd64; 2023-11-09T10:18:34
+|   smistrip_0.4.8+dfsg2-16_all; 2023-11-09T10:20:09
+|   snmp-mibs-downloader_1.5_all; 2023-11-09T10:20:10
+|   snmp_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:20:09
+|   snmpd_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:18:35
+|   snmptrapd_5.9+dfsg-4+deb11u1_amd64; 2023-11-09T10:20:10
+|   snmptt_1.4.2-1_all; 2023-11-09T10:20:10
+|   sntp_1:4.2.8p15+dfsg-1_amd64; 2023-11-09T10:20:10
+|   socat_1.7.4.1-3_amd64; 2023-11-09T10:18:29
+|   ssh_1:8.4p1-5+deb11u3_all; 2024-01-08T02:43:46
+|   sshpass_1.09-1+b1_amd64; 2023-11-09T10:20:10
+|   ssl-cert_1.1.0+nmu1_all; 2023-11-09T10:04:05
+|   subversion_1.14.1-3+deb11u1_amd64; 2023-11-09T10:20:11
+|   sudo_1.9.5p2-3+deb11u1_amd64; 2023-11-09T10:20:11
+|   sysstat_12.5.2-2_amd64; 2023-11-09T10:20:12
+|   systemd-sysv_247.3-7+deb11u4_amd64; 2023-11-09T10:00:55
+|   systemd-timesyncd_247.3-7+deb11u4_amd64; 2023-11-09T10:18:25
+|   systemd_247.3-7+deb11u4_amd64; 2023-11-09T10:00:54
+|   sysvinit-utils_2.96-7+deb11u1_amd64; 2023-11-09T09:56:50
+|   tar_1.34+dfsg-1_amd64; 2023-11-09T09:56:47
+|   task-english_3.68+deb11u1_all; 2023-11-09T10:04:06
+|   task-laptop_3.68+deb11u1_all; 2023-11-09T10:04:06
+|   task-ssh-server_3.68+deb11u1_all; 2023-11-09T10:04:06
+|   task-web-server_3.68+deb11u1_all; 2023-11-09T10:04:06
+|   tasksel-data_3.68+deb11u1_all; 2023-11-09T09:57:02
+|   tasksel_3.68+deb11u1_all; 2023-11-09T09:57:02
+|   telnet_0.17-42_amd64; 2023-11-09T10:03:57
+|   tftp_0.17-23_amd64; 2023-11-09T10:20:12
+|   traceroute_1:2.1.0-2+deb11u1_amd64; 2023-11-09T10:03:58
+|   tzdata_2021a-1+deb11u11_all; 2024-01-08T02:43:49
+|   ucf_3.0043_all; 2023-11-09T10:03:51
+|   udev_247.3-7+deb11u4_amd64; 2023-11-09T10:00:55
+|   unzip_6.0-26+deb11u1_amd64; 2023-11-09T10:20:12
+|   update-inetd_4.51_all; 2023-11-09T10:20:12
+|   usbutils_1:013-3_amd64; 2023-11-09T09:57:59
+|   util-linux-locales_2.36.1-8+deb11u1_all; 2023-11-09T10:04:06
+|   util-linux_2.36.1-8+deb11u1_amd64; 2023-11-09T09:56:50
+|   uuid-dev_2.36.1-8+deb11u1_amd64; 2023-11-09T10:19:30
+|   uuid-runtime_2.36.1-8+deb11u1_amd64; 2023-11-09T10:18:35
+|   vim-common_2:8.2.2434-3+deb11u1_all; 2023-11-09T09:57:03
+|   vim-tiny_2:8.2.2434-3+deb11u1_amd64; 2023-11-09T09:57:03
+|   wamerican_2019.10.06-1_all; 2023-11-09T10:03:58
+|   wget_1.21-1+deb11u1_amd64; 2023-11-09T10:03:58
+|   whiptail_0.52.21-4+b3_amd64; 2023-11-09T09:57:03
+|   whois_5.5.10_amd64; 2023-11-09T10:45:09
+|   wireless-regdb_2022.04.08-2~deb11u1_all; 2023-11-09T10:04:06
+|   wireless-tools_30~pre9-13.1_amd64; 2023-11-09T10:04:06
+|   wkhtmltox_1:0.12.6.1-2.bullseye_amd64; 2023-11-09T10:43:44
+|   wpasupplicant_2:2.9.0-21_amd64; 2023-11-09T10:04:06
+|   x11-common_1:7.7+22_all; 2023-11-09T10:19:21
+|   x11proto-dev_2020.1-1_all; 2023-11-09T10:19:32
+|   xauth_1:1.1-1_amd64; 2023-11-09T10:04:06
+|   xdg-user-dirs_0.17-2_amd64; 2023-11-09T10:04:06
+|   xfonts-75dpi_1:1.0.4+nmu1.1_all; 2023-11-09T10:20:13
+|   xfonts-base_1:1.0.5_all; 2023-11-09T10:20:13
+|   xfonts-encodings_1:1.0.4-2.1_all; 2023-11-09T10:20:12
+|   xfonts-utils_1:7.7+6_amd64; 2023-11-09T10:20:12
+|   xinetd_1:2.3.15.3-1+b1_amd64; 2023-11-09T10:20:14
+|   xkb-data_2.29-2_all; 2023-11-09T09:58:03
+|   xorg-sgml-doctools_1:1.11-1.1_all; 2023-11-09T10:19:31
+|   xtrans-dev_1.4.0-1_all; 2023-11-09T10:19:32
+|   xxd_2:8.2.2434-3+deb11u1_amd64; 2023-11-09T09:57:03
+|   xz-utils_5.2.5-2.1~deb11u1_amd64; 2023-11-09T10:03:58
+|   zerofree_1.1.1-1_amd64; 2023-11-11T10:46:30
+|   zip_3.0-12_amd64; 2023-11-09T10:20:14
+|   zlib1g-dev_1:1.2.11.dfsg-2+deb11u2_amd64; 2023-11-09T10:19:28
+|_  zlib1g_1:1.2.11.dfsg-2+deb11u2_amd64; 2023-11-09T09:56:47
+| snmp-netstat: 
+|   TCP  0.0.0.0:22           0.0.0.0:0
+|   TCP  0.0.0.0:389          0.0.0.0:0
+|   TCP  127.0.0.1:25         0.0.0.0:0
+|   TCP  127.0.0.1:3306       0.0.0.0:0
+|   TCP  127.0.0.1:5432       0.0.0.0:0
+|   TCP  127.0.0.1:7878       0.0.0.0:0
+|   TCP  127.0.0.1:39080      127.0.1.1:80
+|   TCP  127.0.0.1:39096      127.0.1.1:80
+|   UDP  0.0.0.0:68           *:*
+|   UDP  0.0.0.0:123          *:*
+|   UDP  0.0.0.0:161          *:*
+|   UDP  0.0.0.0:162          *:*
+|   UDP  10.10.11.248:123     *:*
+|_  UDP  127.0.0.1:123        *:*
+| snmp-sysdescr: Linux monitored 5.10.0-27-amd64 #1 SMP Debian 5.10.205-2 (2023-12-31) x86_64
+|_  System uptime: 4h21m53.46s (1571346 timeticks)
+| snmp-info: 
+|   enterprise: net-snmp
+|   engineIDFormat: unknown
+|   engineIDData: 6f3fa7421af94c6500000000
+|   snmpEngineBoots: 35
+|_  snmpEngineTime: 4h21m53s
+Service Info: Host: monitored
+
+Host script results:
+|_clock-skew: 14s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 20 12:13:18 2024 -- 1 IP address (1 host up) scanned in 878.03 seconds

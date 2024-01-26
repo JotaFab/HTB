@@ -1,0 +1,19 @@
+# Nmap 7.93 scan initiated Tue Jan  9 23:15:00 2024 as: nmap -p- --min-rate=5000 -oN nmap/target 10.10.11.232
+Warning: 10.10.11.232 giving up on port because retransmission cap hit (10).
+Nmap scan report for clicker.htb (10.10.11.232)
+Host is up (0.11s latency).
+Not shown: 65524 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+111/tcp   open     rpcbind
+2049/tcp  open     nfs
+23473/tcp filtered unknown
+34661/tcp open     unknown
+36667/tcp open     unknown
+39035/tcp open     unknown
+42903/tcp open     unknown
+49399/tcp open     unknown
+49803/tcp filtered unknown
+
+# Nmap done at Tue Jan  9 23:15:23 2024 -- 1 IP address (1 host up) scanned in 22.36 seconds

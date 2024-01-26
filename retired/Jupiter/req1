@@ -1,0 +1,19 @@
+POST /api/ds/query HTTP/1.1
+Host: kiosk.jupiter.htb
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://kiosk.jupiter.htb/d/jMgFGfA4z/moons?orgId=1&refresh=1d
+content-type: application/json
+x-dashboard-uid: jMgFGfA4z
+x-datasource-uid: YItSLg-Vz
+x-grafana-org-id: 1
+x-panel-id: 24
+x-plugin-id: postgres
+Origin: http://kiosk.jupiter.htb
+Content-Length: 484
+DNT: 1
+Connection: close
+
+{"queries":[{"refId":"A","datasource":{"type":"postgres","uid":"YItSLg-Vz"},"rawSql":"select \n  name as \"Name\", \n  parent as \"Parent Planet\", \n  meaning as \"Name Meaning\" \nfrom \n  moons \nwhere \n  parent = 'Saturn' \norder by \n  name desc;","format":"table","datasourceId":1,"intervalMs":60000,"maxDataPoints":470}],"range":{"from":"2023-11-02T21:06:31.302Z","to":"2023-11-03T03:06:31.302Z","raw":{"from":"now-6h","to":"now"}},"from":"1698959191302","to":"1698980791302"}
