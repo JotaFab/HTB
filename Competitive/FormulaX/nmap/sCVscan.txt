@@ -1,0 +1,26 @@
+# Nmap 7.94 scan initiated Tue Mar 12 12:33:47 2024 as: nmap -p22,80,443 -sCV -Pn -vvv -oN nmap/sCVscan.txt 10.129.83.151
+Nmap scan report for 10.129.83.151
+Host is up, received user-set (0.19s latency).
+Scanned at 2024-03-12 12:34:00 -05 for 13s
+
+PORT    STATE  SERVICE REASON       VERSION
+22/tcp  open   ssh     syn-ack      OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 5f:b2:cd:54:e4:47:d1:0e:9e:81:35:92:3c:d6:a3:cb (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBG8rGSIhEBCPw+TyWPlQnCQOhuDZwBuKTDmhMvwgTYIpqvWGe1d5Mtt2LA1hpEl/0cYRCmDfmsgs4xWffPDaK48=
+|   256 b9:f0:0d:dc:05:7b:fa:fb:91:e6:d0:b4:59:e6:db:88 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDxdSOINZhnpi+VKvc9X6X/yYgzl88VdajTFgliPg6Jl
+80/tcp  open   http    syn-ack      nginx 1.18.0 (Ubuntu)
+|_http-cors: GET POST
+| http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_Requested resource was /static/index.html
+|_http-favicon: Unknown favicon MD5: 496A37014B10519386B2904D1B3086BE
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+443/tcp closed https   conn-refused
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar 12 12:34:13 2024 -- 1 IP address (1 host up) scanned in 25.99 seconds

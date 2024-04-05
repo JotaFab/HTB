@@ -1,0 +1,97 @@
+# Nmap 7.94 scan initiated Sat Mar 16 21:00:23 2024 as: nmap -p22,8080 -sCV -oN nmap/scanPorts.txt 10.129.51.207
+Nmap scan report for wifinetictwo.htb (10.129.51.207)
+Host is up (0.44s latency).
+
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)
+|   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)
+|_  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)
+8080/tcp open  http-proxy Werkzeug/1.0.1 Python/2.7.18
+|_http-server-header: Werkzeug/1.0.1 Python/2.7.18
+| http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_Requested resource was http://wifinetictwo.htb:8080/login
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 NOT FOUND
+|     content-type: text/html; charset=utf-8
+|     content-length: 232
+|     vary: Cookie
+|     set-cookie: session=eyJfcGVybWFuZW50Ijp0cnVlfQ.ZfZOxA.-V673WsABIw8aKjHvZFagUbigwQ; Expires=Sun, 17-Mar-2024 02:05:36 GMT; HttpOnly; Path=/
+|     server: Werkzeug/1.0.1 Python/2.7.18
+|     date: Sun, 17 Mar 2024 02:00:36 GMT
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   GetRequest: 
+|     HTTP/1.0 302 FOUND
+|     content-type: text/html; charset=utf-8
+|     content-length: 219
+|     location: http://0.0.0.0:8080/login
+|     vary: Cookie
+|     set-cookie: session=eyJfZnJlc2giOmZhbHNlLCJfcGVybWFuZW50Ijp0cnVlfQ.ZfZOvw.7_FsswDfxIRTJCpLbfpfGOYpC2c; Expires=Sun, 17-Mar-2024 02:05:31 GMT; HttpOnly; Path=/
+|     server: Werkzeug/1.0.1 Python/2.7.18
+|     date: Sun, 17 Mar 2024 02:00:31 GMT
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+|     <title>Redirecting...</title>
+|     <h1>Redirecting...</h1>
+|     <p>You should be redirected automatically to target URL: <a href="/login">/login</a>. If not click the link.
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     content-type: text/html; charset=utf-8
+|     allow: HEAD, OPTIONS, GET
+|     vary: Cookie
+|     set-cookie: session=eyJfcGVybWFuZW50Ijp0cnVlfQ.ZfZOwQ.PmQj-Hte-bE4pyqiIiPRyrzGvgQ; Expires=Sun, 17-Mar-2024 02:05:33 GMT; HttpOnly; Path=/
+|     content-length: 0
+|     server: Werkzeug/1.0.1 Python/2.7.18
+|     date: Sun, 17 Mar 2024 02:00:33 GMT
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.94%I=7%D=3/16%Time=65F64EC0%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,24C,"HTTP/1\.0\x20302\x20FOUND\r\ncontent-type:\x20text/html;\
+SF:x20charset=utf-8\r\ncontent-length:\x20219\r\nlocation:\x20http://0\.0\
+SF:.0\.0:8080/login\r\nvary:\x20Cookie\r\nset-cookie:\x20session=eyJfZnJlc
+SF:2giOmZhbHNlLCJfcGVybWFuZW50Ijp0cnVlfQ\.ZfZOvw\.7_FsswDfxIRTJCpLbfpfGOYp
+SF:C2c;\x20Expires=Sun,\x2017-Mar-2024\x2002:05:31\x20GMT;\x20HttpOnly;\x2
+SF:0Path=/\r\nserver:\x20Werkzeug/1\.0\.1\x20Python/2\.7\.18\r\ndate:\x20S
+SF:un,\x2017\x20Mar\x202024\x2002:00:31\x20GMT\r\n\r\n<!DOCTYPE\x20HTML\x2
+SF:0PUBLIC\x20\"-//W3C//DTD\x20HTML\x203\.2\x20Final//EN\">\n<title>Redire
+SF:cting\.\.\.</title>\n<h1>Redirecting\.\.\.</h1>\n<p>You\x20should\x20be
+SF:\x20redirected\x20automatically\x20to\x20target\x20URL:\x20<a\x20href=\
+SF:"/login\">/login</a>\.\x20\x20If\x20not\x20click\x20the\x20link\.")%r(H
+SF:TTPOptions,14E,"HTTP/1\.0\x20200\x20OK\r\ncontent-type:\x20text/html;\x
+SF:20charset=utf-8\r\nallow:\x20HEAD,\x20OPTIONS,\x20GET\r\nvary:\x20Cooki
+SF:e\r\nset-cookie:\x20session=eyJfcGVybWFuZW50Ijp0cnVlfQ\.ZfZOwQ\.PmQj-Ht
+SF:e-bE4pyqiIiPRyrzGvgQ;\x20Expires=Sun,\x2017-Mar-2024\x2002:05:33\x20GMT
+SF:;\x20HttpOnly;\x20Path=/\r\ncontent-length:\x200\r\nserver:\x20Werkzeug
+SF:/1\.0\.1\x20Python/2\.7\.18\r\ndate:\x20Sun,\x2017\x20Mar\x202024\x2002
+SF::00:33\x20GMT\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20re
+SF:quest\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent
+SF:-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\
+SF:x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20req
+SF:uest\.\n</body></html>\n")%r(FourOhFourRequest,224,"HTTP/1\.0\x20404\x2
+SF:0NOT\x20FOUND\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\nconten
+SF:t-length:\x20232\r\nvary:\x20Cookie\r\nset-cookie:\x20session=eyJfcGVyb
+SF:WFuZW50Ijp0cnVlfQ\.ZfZOxA\.-V673WsABIw8aKjHvZFagUbigwQ;\x20Expires=Sun,
+SF:\x2017-Mar-2024\x2002:05:36\x20GMT;\x20HttpOnly;\x20Path=/\r\nserver:\x
+SF:20Werkzeug/1\.0\.1\x20Python/2\.7\.18\r\ndate:\x20Sun,\x2017\x20Mar\x20
+SF:2024\x2002:00:36\x20GMT\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C/
+SF:/DTD\x20HTML\x203\.2\x20Final//EN\">\n<title>404\x20Not\x20Found</title
+SF:>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20f
+SF:ound\x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20
+SF:manually\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\
+SF:.</p>\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 16 21:01:39 2024 -- 1 IP address (1 host up) scanned in 75.72 seconds

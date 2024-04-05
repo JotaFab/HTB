@@ -1,0 +1,1 @@
+flag = "HTB{f4k3_fl4g_4_t35t1ng}"
